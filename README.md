@@ -30,22 +30,21 @@ DOMC-BT has a website available at [https://domclob.xyz](https://domclob.xyz).
 
 ## ✨ What This Repository Includes?
 
-- [Automated Browser Testing]()
+- **[Automated Browser Testing](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_tests)**
 	- A django webapp that serves DOM Clobbering test pages
 		- Test your browser by clicking a single URL
 		- Dockerized container
-	- Run test cases against a pool of browser instances from [BrowserStack](https://www.browserstack.com/)
-- [DOM Clobbering Attack Payload Generator]()
-	- Online [demo]()
-- [Interactive List of Clobbering Payloads]() 
+	- [Run test cases](https://github.com/SoheilKhodayari/DOMClobbering/blob/master/run_browserstack.py) against a pool of browser instances from [BrowserStack](https://www.browserstack.com/)
+- **[DOM Clobbering Attack Payload Generator](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_payload_generator)**
+	- Online [demo](https://domclob.xyz/domc_payload_generator/)
+- **[Interactive List of Clobbering Payloads](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_markups)** 
 	- Clobbering Markups for `mobile` and `desktop` browsers
-	- Data per browser [here]() 
-	- Online [demo]()
-- [DOM Clobbering Wiki]()
+	- Online [demo](https://domclob.xyz/domc_markups/list)
+- **[DOM Clobbering Wiki](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_wiki)**
 	- Clobbering techniques
 	- Vulnerable code patterns
 	- Defenses
-	- Online [demo]()
+	- Online [demo](https://domclob.xyz/domc_wiki/index)
 
 
 ## 🚀 Browser Testing
@@ -150,7 +149,7 @@ For any questions, suggestions, feedback or concerns, please [raise an issue in 
 
 ## 🎃 Contribution and Code Of Conduct
 
-Bug reports and pull requests are more than welcomed on [GitHub](/pulls). For more information, please refer to [contribution guidelines](https://github.com/SoheilKhodayari/DOMClobbering/blob/master/domc_wiki/contributions.md). 
+Bug reports and pull requests are more than welcomed on [GitHub](https://github.com/SoheilKhodayari/TheThing/pulls). For more information, please refer to [contribution guidelines](https://github.com/SoheilKhodayari/DOMClobbering/blob/master/domc_wiki/contributions.md). 
 
 This project is intended to be a safe, welcoming space, and contributors are expected to adhere to the contributor [code of conduct](https://github.com/SoheilKhodayari/DOMClobbering/blob/master/CODE_OF_CONDUCT.md). 
 
