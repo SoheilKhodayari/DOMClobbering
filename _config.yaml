@@ -2,7 +2,7 @@
 # Configuration File for DOM Clobbering Wiki Website
 #
 
-title: "DOM Clobbering Wiki"
+title: "DOMC Wiki"
 remote_theme: just-the-docs/just-the-docs
 # theme: just-the-docs
 color_scheme: "dark"
@@ -11,6 +11,7 @@ exclude:
   - README.md
   - CHANGELOG.md
   - CODE_OF_CONDUCT.md
+  - static/README.md
 
 # Aux links for the upper right navigation
 aux_links:
