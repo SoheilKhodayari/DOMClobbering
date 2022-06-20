@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="//soheilkhodayari.github.io/DOMClobbering/">
-		<img align="center" alt="DOMC-BT" src="static/assets/images/logo.png" height="195">
+		<img align="center" alt="DOMC-BT" src="static/assets/images/logo.png" height="165">
 	</a>
 </p>
 
@@ -10,48 +10,50 @@
 
 <p align="center">
 	<a href="https://domclob.xyz">Website</a> |
-	<a href="">Docs</a> |
-	<a href="">Quick Start</a> |
-	<a href="">Demo</a>
+		<a href="https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_tests">Browser Testing</a> |
+	<a href="https://domclob.xyz/domc_wiki/index">Wiki</a> |
+	<a href="https://domclob.xyz/domc_markups/list">Markups</a> |
+	<a href="https://domclob.xyz/domc_payload_generator/">Payload Generator</a>
 </p>
 
 
-# DOMC-BT: DOM Clobbering Browser Testing Framework
+# DOM Clobbering Browser Testing Framework
 
 [![Build Status](https://travis-ci.org/boennemann/badges.svg?branch=master)](https://travis-ci.org/boennemann/badges) [![Node](https://img.shields.io/badge/node%40latest-%3E%3D%206.0.0-brightgreen.svg)](https://img.shields.io/badge/node%40latest-%3E%3D%206.0.0-brightgreen.svg) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Open Source?Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Naereen/badges/)
 
 A comprehensive framework for testing web browsers against DOM Clobbering. DOMC-BT exhaustively generates test cases of candidate DOM Clobbering markups and automatically tests them against web browsers. 
 
-DOMC-BT has a website available at https://domclob.xyz.
+DOMC-BT complements [`TheThing`](https://github.com/SoheilKhodayari/TheThing) a static-dynamic security analysis tool for DOM clobbering based on [JAW](https://soheilkhodayari.github.io/JAW/).
 
-DOMC-BT complements **[`TheThing`](https://github.com/SoheilKhodayari/TheThing)**, a static-dynamic security analysis tool for DOM clobbering vulnerabilities based on [JAW](https://soheilkhodayari.github.io/JAW/).
-
+DOMC-BT has a website available at [https://domclob.xyz](https://domclob.xyz).
 
 
 ## ✨ What This Repository Includes?
 
 - [Automated Browser Testing]()
-	- [x] A django webapp that serves DOM Clobbering test pages
-		- [x] Test your browser by clicking a single URL
-		- [x] Dockerized container
-	- [x] Run test cases against a pool of browser instances from [BrowserStack](https://www.browserstack.com/)
+	- A django webapp that serves DOM Clobbering test pages
+		- Test your browser by clicking a single URL
+		- Dockerized container
+	- Run test cases against a pool of browser instances from [BrowserStack](https://www.browserstack.com/)
 - [DOM Clobbering Attack Payload Generator]()
-	- [x] Online [demo]()
+	- Online [demo]()
 - [Interactive List of Clobbering Payloads]() 
-	- [x] Clobbering Markups for `mobile` and `desktop` browsers
-	- [x] Data per browser [here]() 
-	- [x] Online [demo]()
+	- Clobbering Markups for `mobile` and `desktop` browsers
+	- Data per browser [here]() 
+	- Online [demo]()
 - [DOM Clobbering Wiki]()
-	- [x] Clobbering techniques
-	- [x] Vulnerable code patterns
-	- [x] Defenses
-	- [x] Online [demo]()
+	- Clobbering techniques
+	- Vulnerable code patterns
+	- Defenses
+	- Online [demo]()
 
 
 ## 🚀 Browser Testing
 
 
 ### 🏭 Building 
+
+You can build the tool by:
 
 ```bash
 $ docker-compose build web
@@ -169,9 +171,9 @@ The contents of this repository has been published as a part of a S&P'23 paper. 
 
 ## Cross-Browser Testing
 
-<a target="_blank" href="https://www.browserstack.com/"><img width="200" src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png"></a><br>
-
 We thank the [BrowserStack Open-Source Program](https://www.browserstack.com/open-source) for supporting this project with their free and top quality services.
+
+<a target="_blank" href="https://www.browserstack.com/"><img width="165" src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png"></a><br>
 
 
 
