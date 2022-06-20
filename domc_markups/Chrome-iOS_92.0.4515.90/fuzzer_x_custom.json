@@ -1,0 +1,18 @@
+{
+    "total_tests": 244,
+    "clobberable_x": [
+        {
+            "html": "<customtag id=\"x\" ></customtag>",
+            "html_tag": "customtag",
+            "html_attribute": "id"
+        }
+    ],
+    "clobberable_window_x": [
+        {
+            "html": "<customtag id=\"x\" ></customtag>",
+            "html_tag": "customtag",
+            "html_attribute": "id"
+        }
+    ],
+    "clobberable_document_x": []
+}

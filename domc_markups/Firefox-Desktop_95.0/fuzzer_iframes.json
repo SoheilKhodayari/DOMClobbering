@@ -1,0 +1,295 @@
+{
+    "total_tests": 2,
+    "clobberable_x": [
+        {
+            "html": "\n            <iframe name=\"x\" srcdoc=\"<iframe id='y' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x"
+            ],
+            "html_attribute2": [
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" srcdoc=\"<iframe id='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" id=\"y\" srcdoc=\"<iframe id='y' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" id=\"y\" srcdoc=\"<iframe id='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" srcdoc=\"<iframe name='y' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x"
+            ],
+            "html_attribute2": [
+                "name=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" srcdoc=\"<iframe name='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" name=\"y\" srcdoc=\"<iframe name='y' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" name=\"y\" srcdoc=\"<iframe name='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        }
+    ],
+    "clobberable_window_x": [
+        {
+            "html": "\n            <iframe name=\"x\" srcdoc=\"<iframe id='y' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x"
+            ],
+            "html_attribute2": [
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" srcdoc=\"<iframe id='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" id=\"y\" srcdoc=\"<iframe id='y' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" id=\"y\" srcdoc=\"<iframe id='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" srcdoc=\"<iframe name='y' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x"
+            ],
+            "html_attribute2": [
+                "name=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" srcdoc=\"<iframe name='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" name=\"y\" srcdoc=\"<iframe name='y' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" name=\"y\" srcdoc=\"<iframe name='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        }
+    ],
+    "clobberable_document_x": [],
+    "clobberable_x_x": [
+        {
+            "html": "\n            <iframe name=\"x\" srcdoc=\"<iframe id='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" id=\"y\" srcdoc=\"<iframe id='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        }
+    ],
+    "clobberable_window_x_x": [
+        {
+            "html": "\n            <iframe name=\"x\" srcdoc=\"<iframe id='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        },
+        {
+            "html": "\n            <iframe name=\"x\" id=\"y\" srcdoc=\"<iframe id='y' name='x' ></iframe>\">\n            </iframe>\n            ",
+            "html_tag1": "iframe",
+            "html_tag2": "iframe",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "attribute",
+            "return_value": "WindowProxy"
+        }
+    ],
+    "clobberable_document_x_x": []
+}

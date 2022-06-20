@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+
+<!-- area to append the test DOM clobbering payloads -->
+<div id="clobbering-payloads"></div>
+
+<script type="text/javascript">
+	
+
+var theDocument = window.document;
+/**
+ * undefined, custom HTML tag
+ */
+const CONST_HTML_TAGS = ["customtag"]; 
+
+
+// length: 242 + 1 (for data-*)
+const CONST_HTML_ATTRIBUTES=['href', 'nomodule', 'time', 'method', 'ontoggle', 'allowfullscreen', 'controls', 'loop', 'src', 'script', 'onkeyup', 'ondrag', 'border', 'as', 'input', 'pattern', 'rel', 'rows', 'sizes', 'onblur', 'onchange', 'meta', 'async', 'cols', 'source', 'alt', 'style', 'oncontextmenu', 'shape', 'enterkeyhint', 'textareaaccesskey', 'media', 'novalidate', 'hreflang', 'hidden', 'oncanplaythrough', 'formnovalidate', 'download', 'onerror', 'muted', 'imagesrcset', 'action', 'rowspan', 'ondragend', 'ondragstart', 'minlength', 'mayscript', 'defer', 'ins', 'scope', 'crossorigin', 'default', 'oninput', 'max', 'srcset', 'control', 'size', 'progress', 'onsuspend', 'itemscope', 'dirname', 'onplay', 'srcdoc', 'name', 'onratechange', 'loading', 'onseeking', 'select', 'is', 'onunload', 'li', 'preload', 'onoffline', 'onmouseup', 'open', 'onended', 'option', 'a', 'target', 'onmouseout', 'hspace', 'translate', 'oncopy', 'enctype', 'lang', 'onreset', 'sandbox', 'label', 'itemref', 'formenctype', 'headers', 'required', 'start', 'accept', 'onpause', 'low', 'charset', 'meter', 'object', 'integrity', 'param', 'disabled', 'ononline', 'del', 'map', 'onhashchange', 'audio', 'onmousedown', 'onselect', 'span', 'selected', 'imagesizes', 'base', 'Global Attributes', 'dir', 'onpageshow', 'onwheel', 'autocomplete', 'contenteditable', 'output', 'kind', 'textarea', 'onafterprint', 'nonce', 'srclang', 'frameBorder', 'for', 'onbeforeunload', 'poster', 'iframe', 'onbeforeprint', 'details', 'playsinline', 'optgroup', 'colgroup', 'onkeypress', 'onpaste', 'onkeydown', 'maxlength', 'draggable', 'id', 'oncuechange', 'wrap', 'ondurationchange', 'referrerpolicy', 'color', 'menu', 'ondragenter', 'oncanplay', 'itemprop', 'datetime', 'ondblclick', 'reversed', 'archive', 'formaction', 'noResize', 'onscroll', 'area', 'onsubmit', 'video', 'vspace', 'codebase', 'ondragleave', 'inputmode', 'scrolling', 'link', 'col', 'width', 'multiple', 'align', 'data', 'ismap', 'ol', 'onmouseover', 'placeholder', 'form', 'readonly', 'type', 'formtarget', 'autofocus', 'onplaying', 'high', 'onemptied', 'onmousemove', 'onseeked', 'http-equiv', 'autoplay', 'embed', 'onabort', 'body', 'onresize', 'onloadeddata', 'onvolumechange', 'oncut', 'step', 'ondrop', 'onwaiting', 'cite', 'ontimeupdate', 'img', 'marginHeight', 'itemtype', 'spellcheck', 'onsearch', 'onfocus', 'allow', 'oninvalid', 'onprogress', 'min', 'ondragover', 'marginWidth', 'longDesc', 'checked', 'tabindex', 'onmousewheel', 'fieldset', 'list', 'formmethod', 'onload', 'value', 'onclick', 'class', 'onloadstart', 'itemid', 'title', 'button', 'td', 'colspan', 'accept-charset', 'content', 'coords', 'onstalled', 'height', 'accesskey', 'optimum', 'th', 'code', 'onloadedmetadata', 'autocapitalize', 'usemap', 'widt', 'track']; // + 'data-*' 
+
+
+/** 
+* @reference SPEC 3.2.6 
+* URL: https://html.spec.whatwg.org/#global-attributes
+**/
+const CONST_GLOBAL_ATTRIBUTES = [
+    "accesskey",
+    "autocapitalize",
+    "autofocus",
+    "contenteditable",
+    "dir",
+    "draggable",
+    "enterkeyhint",
+    "hidden",
+    "inputmode",
+    "is",
+    "itemid",
+    "itemprop",
+    "itemref",
+    "itemscope",
+    "itemtype",
+    "lang",
+    "nonce",
+    "spellcheck",
+    "style",
+    "tabindex",
+    "title",
+    "translate",
+    "name",
+    "id"
+];
+
+const CONST_SCRIPT_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "src",
+    "type",
+    "nomodule",
+    "async",
+    "defer",
+    "crossorigin",
+    "integrity",
+    "referrerpolicy"
+]);
+
+const CONST_VIDEO_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "src",
+    "crossorigin",
+    "poster",
+    "preload",
+    "autoplay",
+    "playsinline",
+    "loop",
+    "muted",
+    "control",
+    "width",
+    "height",
+]);
+
+const CONST_AUDIO_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "src",
+    "crossorigin",
+    "preload",
+    "autoplay",
+    "loop",
+    "muted",
+    "controls",
+]);
+
+
+const CONST_TRACK_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "kind",
+    "src",
+    "srclang",
+    "label",
+    "default"
+]);
+
+const CONST_SOURCE_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "type",
+    "src",
+    "srcset",
+    "sizes",
+    "media",
+    "width",
+    "height"
+]);
+
+const CONST_OBJECT_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "data",
+    "type",
+    "name",
+    "form",
+    "width",
+    "height"
+]);
+
+const CONST_LINK_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "href",
+    "crossorigin",
+    "rel",
+    "media",
+    "integrity",
+    "hreflang",
+    "type",
+    "referrerpolicy",
+    "sizes",
+    "imagesrcset",
+    "imagesizes",
+    "as",
+    "color",
+    "disabled",
+    "title"
+]);
+
+const CONST_INPUT_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "accept",
+    "alt",
+    "autocomplete",
+    "checked",
+    "dirname",
+    "disabled",
+    "form",
+    "formaction",
+    "formenctype",
+    "formmethod",
+    "formnovalidate",
+    "formtarget",
+    "height",
+    "list",
+    "max",
+    "maxlength",
+    "min",
+    "minlength",
+    "multiple",
+    "name",
+    "pattern",
+    "placeholder",
+    "readonly",
+    "required",
+    "size",
+    "src",
+    "step",
+    "type",
+    "value",
+    "width",
+    "title"
+]);
+
+const CONST_IMG_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "alt",
+    "src",
+    "srcset",
+    "sizes",
+    "crossorigin",
+    "usemap",
+    "ismap",
+    "width",
+    "height",
+    "referrerpolicy",
+    "decoding",
+    "loading"
+]);
+
+const CONST_IFRAME_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "src",
+    "srcdoc",
+    "name",
+    "sandbox",
+    "allow",
+    "allowfullscreen",
+    "width",
+    "height",
+    "referrerpolicy",
+    "loading"
+]);
+
+const CONST_FRAME_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "name",
+    "scrolling",
+    "src",
+    "frameBorder",
+    "longDesc",
+    "noResize",
+    "marginHeight",
+    "marginWidth"
+]);
+
+
+const CONST_APPLET_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "align",
+    "alt",
+    "archive",
+    "border",
+    "codebase",
+    "height",
+    "hspace",
+    "mayscript",
+    "name",
+    "vspace",
+    "width",
+    "code"
+]);
+
+const CONST_EMBED_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "src",
+    "type",
+    "width",
+    "height"
+]);
+
+
+function get_all_valid_html_attributes(html_tag){
+
+    switch(html_tag){
+        case 'script': 
+            return CONST_SCRIPT_ATTRIBUTES;
+        case 'video':
+            return CONST_VIDEO_ATTRIBUTES;
+        case 'audio':
+            return CONST_AUDIO_ATTRIBUTES;
+        case 'track':
+            return CONST_TRACK_ATTRIBUTES;
+        case 'source':
+            return CONST_SOURCE_ATTRIBUTES;
+        case 'object':
+            return CONST_OBJECT_ATTRIBUTES;
+        case 'link':
+            return CONST_LINK_ATTRIBUTES;
+        case 'input': 
+            return CONST_INPUT_ATTRIBUTES;
+        case 'img':
+            return CONST_IMG_ATTRIBUTES;
+        case 'image':
+            return CONST_IMG_ATTRIBUTES;
+        case 'iframe':
+            return CONST_IFRAME_ATTRIBUTES;
+        case 'frame':
+            return CONST_FRAME_ATTRIBUTES;
+        case 'embed':
+            return CONST_EMBED_ATTRIBUTES;
+        case 'applet':
+            return CONST_APPLET_ATTRIBUTES;
+        default:
+             // all attributes
+            return CONST_HTML_ATTRIBUTES;
+    }
+}
+
+
+/**
+ * List of Window object properties
+ * Fetch from: https://developer.mozilla.org/en-US/docs/Web/API/Window
+ */
+var window_properties = ["caches", "closed", "console", "controllers", "crossOriginIsolated", "crypto", "customElements", "defaultStatus", "devicePixelRatio", "dialogArguments", "directories", "document", "event", "frameElement", "frames", "fullScreen", "history", "indexedDB", "innerHeight", "innerWidth", "isSecureContext", "length", "localStorage", "location", "locationbar", "menubar", "mozAnimationStartTime", "mozInnerScreenX", "mozInnerScreenY", "name", "navigator", "onabort", "onafterprint", "onanimationcancel", "onanimationend", "onanimationiteration", "onappinstalled", "onauxclick", "onbeforeinstallprompt", "onbeforeprint", "onbeforeunload", "onblur", "oncancel", "oncanplay", "oncanplaythrough", "onchange", "onclick", "onclose", "oncontextmenu", "oncuechange", "ondblclick", "ondevicemotion", "ondeviceorientation", "ondeviceorientationabsolute", "ondragdrop", "ondurationchange", "onended", "onerror", "onfocus", "onformdata", "ongamepadconnected", "ongamepaddisconnected", "ongotpointercapture", "onhashchange", "oninput", "oninvalid", "onkeydown", "onkeypress", "onkeyup", "onlanguagechange", "onload", "onloadeddata", "onloadedmetadata", "onloadend", "onloadstart", "onlostpointercapture", "onmessage", "onmessageerror", "onmousedown", "onmouseenter", "onmouseleave", "onmousemove", "onmouseout", "onmouseover", "onmouseup", "onpaint", "onpause", "onplay", "onplaying", "onpointercancel", "onpointerdown", "onpointerenter", "onpointerleave", "onpointermove", "onpointerout", "onpointerover", "onpointerup", "onpopstate", "onrejectionhandled", "onreset", "onresize", "onscroll", "onselect", "onselectionchange", "onselectstart", "onstorage", "onsubmit", "ontouchcancel", "ontouchstart", "ontransitioncancel", "ontransitionend", "onunhandledrejection", "onunload", "onvrdisplayactivate", "onvrdisplayblur", "onvrdisplayconnect", "onvrdisplaydeactivate", "onvrdisplaydisconnect", "onvrdisplayfocus", "onvrdisplaypointerrestricted", "onvrdisplaypointerunrestricted", "onvrdisplaypresentchange", "onwheel", "opener", "origin", "outerHeight", "outerWidth", "pageXOffset", "pageYOffset", "parent", "performance", "personalbar", "pkcs11", "screen", "screenLeft", "screenTop", "screenX", "screenY", "scrollbars", "scrollMaxX", "scrollMaxY", "scrollX", "scrollY", "self", "sessionStorage", "sidebar", "speechSynthesis", "status", "statusbar", "toolbar", "top", "visualViewport", "DOMParser", "Notification", "Math", "Worker", "Reflect", "FileReader", "constructor", "setTimeout", "setInterval", "Promise", "eval", "Proxy", "decodeURIComponent", "encodeURIComponent", "decodeURI", "encodeURI", "dataLayer", "escape", "unescape", "isFinite", "parseInt", "parseFloat", "MessageChannel", "Request", "XMLHttpRequest", "XDomainRequest", "ActiveXObject", "fetch", "WebSocket", "AbortSignal", "attachEvent", "MouseEvent", "Touch", "TouchEvent", "CustomEvent", "Event", "EventTarget", "EventEmitter", "EventSource", "ResizeObserver", "ReportingObserver", "IntersectionObserver", "PerformanceObserver", "MutationObserver", "TextDecoder", "TextEncoder", "Node", "Element", "HTMLDocument", "HTMLElement", "HTMLTemplateElement", "HTMLIFrameElement", "HTMLInputElement", "HTMLAnchorElement", "HTMLButtonElement", "HTMLLinkElement", "HTMLImageElement", "HTMLEmbedElement", "HTMLFrameElement", "HTMLObjectElement", "HTMLScriptElement", "NamedNodeMap", "NodeList", "SVGRect", "MediaSource", "CSSRule", "CSSStyleDeclaration", "CSSStyleSheet", "CSSStyleRule", "chrome", "safari", "firefoxAccessException", "trustedTypes", "HTMLCollection", "WeakMap", "WeakSet", "JSON", "Symbol", "Boolean", "Object", "String", "Array", "Image", "Number", "Function", "Map", "Date", "undefined", "null", "Float64Array", "Float32Array", "Uint8ClampedArray", "Uint16Array", "Uint32Array", "Int16Array", "Int32Array", "Int8Array", "Uint8Array", "ArrayBuffer", "SharedArrayBuffer", "Blob", "FormData", "URLSearchParams", "ReferenceError", "RangeError", "SyntaxError", "Error", "TypeError", "RegExp", "arguments", "globalThis", "Infinity"];
+
+/**
+ * List of Window object methods
+ * Fetch from: https://developer.mozilla.org/en-US/docs/Web/API/Window
+ */
+const window_methods = ["alert", "atob", "blur", "btoa", "cancelAnimationFrame", "cancelIdleCallback", "captureEvents", "clearImmediate", "clearInterval", "clearTimeout", "close", "confirm", "convertPointFromNodeToPage", "convertPointFromPageToNode", "createImageBitmap", "dump", "fetch", "find", "focus", "getComputedStyle", "getDefaultComputedStyle", "getSelection", "home", "matchMedia", "minimize", "moveBy", "moveTo", "open", "openDialog", "postMessage", "print", "prompt", "queueMicrotask", "releaseEvents", "requestAnimationFrame", "requestIdleCallback", "resizeBy", "resizeTo", "routeEvent", "scroll", "scrollBy", "scrollByLines", "scrollByPages", "scrollTo", "setCursor", "setImmediate", "setInterval", "setTimeout", "showDirectoryPicker", "showModalDialog", "showOpenFilePicker", "showSaveFilePicker", "sizeToContent", "stop", "updateCommands", "addEventListener"];
+
+/**
+ * List of Window object event properties
+ * Fetch from: https://developer.mozilla.org/en-US/docs/Web/API/Window
+ */
+const window_events = ["event", "afterprint", "animationcancel", "animationend", "animationiteration", "beforeprint", "beforeunload", "blur", "copy", "cut", "DOMContentLoaded", "error", "focus", "hashchange", "languagechange", "load", "message", "messageerror", "offline", "online", "orientationchange", "pagehide", "pageshow", "paste", "popstate", "rejectionhandled", "storage", "transitioncancel", "unhandledrejection", "unload", "vrdisplayconnect", "vrdisplaydisconnect", "vrdisplaypresentchange"];
+
+
+
+/**
+ * List of Window object properties
+ * Fetch from: https://developer.mozilla.org/en-US/docs/Web/API/Document
+ */
+const document_properties = ["activeElement", "alinkColor", "all", "anchors", "applets", "bgColor", "body", "characterSet", "childElementCount", "children", "compatMode", "contentType", "currentScript", "defaultView", "designMode", "dir", "doctype", "documentElement", "documentURI", "documentURIObject", "domain", "embeds", "fgColor", "firstElementChild", "forms", "fullscreen", "fullscreenElement", "fullscreenEnabled", "head", "height", "hidden", "images", "implementation", "lastElementChild", "lastModified", "lastStyleSheetSet", "linkColor", "links", "location", "mozSyntheticDocument", "onabort", "onafterscriptexecute", "onanimationcancel", "onanimationend", "onanimationiteration", "onauxclick", "onbeforescriptexecute", "onblur", "oncancel", "oncanplay", "oncanplaythrough", "onchange", "onclick", "onclose", "oncontextmenu", "oncuechange", "ondblclick", "ondurationchange", "onended", "onerror", "onfocus", "onformdata", "onfullscreenchange", "onfullscreenerror", "ongotpointercapture", "oninput", "oninvalid", "onkeydown", "onkeypress", "onkeyup", "onload", "onloadeddata", "onloadedmetadata", "onloadend", "onloadstart", "onlostpointercapture", "onmousedown", "onmouseenter", "onmouseleave", "onmousemove", "onmouseout", "onmouseover", "onmouseup", "onoffline", "ononline", "onpause", "onplay", "onplaying", "onpointercancel", "onpointerdown", "onpointerenter", "onpointerleave", "onpointermove", "onpointerout", "onpointerover", "onpointerup", "onreset", "onresize", "onscroll", "onselect", "onselectionchange", "onselectstart", "onsubmit", "ontouchcancel", "ontouchstart", "ontransitioncancel", "ontransitionend", "onvisibilitychange", "onwheel", "pictureInPictureElement", "pictureInPictureEnabled", "plugins", "pointerLockElement", "popupNode", "preferredStyleSheetSet", "readyState", "referrer", "rootElement", "scripts", "scrollingElement", "selectedStyleSheetSet", "styleSheets", "styleSheetSets", "timeline", "title", "tooltipNode", "URL", "visibilityState", "vlinkColor", "width", "xmlEncoding", "xmlVersion"];
+
+/**
+ * List of document object methods
+ * Fetch from: https://developer.mozilla.org/en-US/docs/Web/API/Document
+ */
+const document_methods = ["adoptNode", "append", "caretPositionFromPoint", "caretRangeFromPoint", "clear", "close", "createAttribute", "createCDATASection", "createComment", "createDocumentFragment", "createElement", "createElementNS", "createEntityReference", "createEvent", "createExpression", "createExpression", "createNodeIterator", "createNSResolver", "createNSResolver", "createProcessingInstruction", "createRange", "createTextNode", "createTouch", "createTouchList", "createTreeWalker", "elementFromPoint", "elementsFromPoint", "enableStyleSheetsForSet", "evaluate", "evaluate", "execCommand", "exitFullscreen", "exitPictureInPicture", "exitPointerLock", "getAnimations", "getBoxObjectFor", "getElementById", "getElementsByClassName", "getElementsByName", "getElementsByTagName", "getElementsByTagNameNS", "getSelection", "hasFocus", "hasStorageAccess", "importNode", "mozSetImageElement", "open", "prepend", "queryCommandEnabled", "queryCommandSupported", "querySelector", "querySelectorAll", "registerElement", "releaseCapture", "replaceChildren", "requestStorageAccess", "write", "writeln", "addEventListener"];
+
+/**
+ * List of document object event properties
+ * Fetch from: https://developer.mozilla.org/en-US/docs/Web/API/Document
+ */
+const document_events = ["animationcancel", "animationend", "animationiteration", "animationstart", "copy", "cut", "DOMContentLoaded", "drag", "dragend", "dragenter", "dragleave", "dragover", "dragstart", "drop", "fullscreenchange", "fullscreenerror", "gotpointercapture", "keydown", "keypress", "keyup", "lostpointercapture", "paste", "pointercancel", "pointerdown", "pointerenter", "pointerleave", "pointerlockchange", "pointerlockerror", "pointermove", "pointerout", "pointerover", "pointerup", "readystatechange", "scroll", "selectionchange", "selectstart", "touchcancel", "touchend", "touchmove", "touchstart", "transitioncancel", "transitionend", "transitionrun", "transitionstart", "visibilitychange", "wheel"];
+
+
+
+/* a constant value to check if the clobbering was successful or not */
+const  DOM_CLOBBERING_SUCCESSFUL_VALUE = "DOM_CLOBBERING_SUCCESSFUL_VALUE";
+
+/* area to append the test DOM clobbering payloads */
+var clobbering_payload_area = theDocument.getElementById('clobbering-payloads');
+
+
+if(typeof String.prototype.replaceAll === "undefined") {
+    String.prototype.replaceAll = function(match, replace) {
+       return this.replace(new RegExp(match, 'g'), () => replace);
+    }
+}
+
+
+/** 
+* @param html
+* @return removes the `data-value=DOM_CLOBBERING_SUCCESSFUL_VALUE` attribute from the input html and returns it.
+*/
+function cleanDomClobberingPayload(html){
+
+    let returnHtml = html.replaceAll(`data-value="${DOM_CLOBBERING_SUCCESSFUL_VALUE}"`).replaceAll(`data-value='${DOM_CLOBBERING_SUCCESSFUL_VALUE}'`).replaceAll('undefined', '');
+    
+    return returnHtml;
+}
+
+
+
+
+
+function do_analysis_for_native_property(native_property, window_or_document){
+
+    /* store the clobbering results in g_* global variables */
+    var g_list_clobberable_x = [];
+    var g_list_clobberable_window_x = [];
+    var g_list_clobberable_document_x = [];
+
+
+    function test_inclusion_for_x(html_tag, html_attr, clobbering_variable_x){
+
+        try{
+            var div = theDocument.createElement('div');
+            var html = `<${html_tag} ${html_attr}="${clobbering_variable_x}" data-value="${DOM_CLOBBERING_SUCCESSFUL_VALUE}"></${html_tag}>`
+
+            div.innerHTML = html;
+            // add the payload to DOM
+            clobbering_payload_area.appendChild(div);
+
+        }catch{
+            // PASS
+            // throws when we set an invalid value for an HTML attribute
+            // e.g., width=x where x is not a number.
+        }
+
+        var clobbered_x;
+        var clobbered_window_x;
+        var clobbered_document_x;
+
+
+        if(window_or_document === "window"){
+
+            try{
+                // check: clobbering x
+                clobbered_x = eval(`${clobbering_variable_x} && ${clobbering_variable_x}.getAttribute('data-value')`);
+                
+                // check: clobbering window.x
+                clobbered_window_x = eval(`window.${clobbering_variable_x} && window.${clobbering_variable_x}.getAttribute('data-value')`)
+                
+
+            }
+            catch{
+                // handle the errors thrown due to clobbering failures and the variables not defined
+            }
+
+            if(clobbered_x === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html), 
+                    "html_tag": html_tag,
+                    "html_attribute": html_attr
+                };
+
+                g_list_clobberable_x.push(result);
+            }
+
+             if(clobbered_window_x === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html), 
+                    "html_tag": html_tag,
+                    "html_attribute": html_attr
+                };
+                g_list_clobberable_window_x.push(result);
+            }
+
+        }else{
+            // window_or_document === "document"
+
+            try{
+
+                // check: clobbering document.x
+                clobbered_document_x = eval(`document.${clobbering_variable_x} && document.${clobbering_variable_x}.getAttribute('data-value')`)
+
+
+            }
+            catch{
+                // handle the errors thrown due to clobbering failures and the variables not defined
+            }
+
+            if(clobbered_document_x === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+                
+                var result = {
+                    "html": cleanDomClobberingPayload(html), 
+                    "html_tag": html_tag,
+                    "html_attribute": html_attr
+                };
+                g_list_clobberable_document_x.push(result);
+            }  
+
+        }
+
+        // remove the payload from DOM
+        clobbering_payload_area.removeChild(div);
+    }
+
+
+
+    var count_tests = 1;
+    const clobberable_attributes = ['id', 'name']; // according to fuzzer_x.html tests
+    function fuzzer_main(){
+
+        for(var html_tag of CONST_HTML_TAGS){        
+            for(var html_attr of clobberable_attributes){
+                
+                count_tests+=1
+                test_inclusion_for_x(html_tag, html_attr, native_property);
+
+            }
+        }
+    }
+    fuzzer_main();
+
+    if(window_or_document === "window"){
+        return {
+            "count_tests": count_tests,
+            "clobberable_x": g_list_clobberable_x,
+            "clobberable_window_x": g_list_clobberable_window_x,
+        }    
+    }else{
+        return {
+            "count_tests": count_tests,
+            "clobberable_document_x": g_list_clobberable_document_x
+        }  
+    }
+
+}
+
+
+
+
+
+
+var data= {
+    "data": {
+        "clobberable_window_properties": {},
+        "clobberable_window_methods": {},
+        "clobberable_window_events": {},
+        "clobberable_document_properties": {},
+        "clobberable_document_methods": {},
+        "clobberable_document_events": {},
+    }
+}
+
+
+for(var obj of window_properties){
+    var results = do_analysis_for_native_property(obj, "window");
+    if(results){
+        data["data"]["clobberable_window_properties"][obj] = results;
+    }
+   
+}
+
+for(var obj of window_methods){
+    var results = do_analysis_for_native_property(obj, "window");
+    if(results){
+        data["data"]["clobberable_window_methods"][obj] = results;
+    }
+    
+}
+
+for(var obj of window_events){
+    var results = do_analysis_for_native_property(obj, "window");
+    if(results){
+        data["data"]["clobberable_window_events"][obj] = results;
+    }
+    
+}
+
+for(var obj of document_properties){
+    var results = do_analysis_for_native_property(obj, "document");
+    if(results){
+        data["data"]["clobberable_document_properties"][obj] = results;
+    }
+}
+
+for(var obj of document_methods){
+    var results = do_analysis_for_native_property(obj, "document");
+    if(results){
+         data["data"]["clobberable_document_methods"][obj] = results;
+    }
+}
+
+for(var obj of document_events){
+    var results = do_analysis_for_native_property(obj, "document");
+    if(results){
+        data["data"]["clobberable_document_events"][obj] = results;
+    }
+}
+
+
+
+
+var postDataEndpoint = "{% url 'backend:post_domc_test' %}" + window.location.search;
+
+async function sendFinishSignal(){
+    
+    // add a node with id `DOMC_TESTS_FINISHED` to the DOM tree
+    // so that browser automation frameworks can check if the tests
+    // are finished or not
+
+    let label_id = 'DOMC_TESTS_FINISHED';
+    document.getElementById('clobbering-payloads').innerHTML = `<a id=${label_id}></a>`;
+
+}
+
+async function sendData(){
+
+    const response= await fetch(postDataEndpoint, {
+        method: 'POST',
+        body: JSON.stringify(data),
+    });
+
+    await sendFinishSignal();
+    return response.json();
+}
+
+function getNextTestUrl(){
+
+    let currentURL = ''+ window.location;
+    const params = new URLSearchParams(window.location.search);
+    let currentTestName = params.get('t');
+    
+    let fuzzer_x = 'fuzzer_x';
+    let fuzzer_x_custom = 'fuzzer_x_custom';
+    
+    let fuzzer_x_native = 'fuzzer_x_native';
+    let fuzzer_x_native_custom = 'fuzzer_x_native_custom';
+
+    let fuzzer_x_y_11 = 'fuzzer_x_y11';
+    let fuzzer_x_y_12 = 'fuzzer_x_y12';
+    let fuzzer_x_y_21 = 'fuzzer_x_y21';
+    let fuzzer_x_y_22 = 'fuzzer_x_y22';
+
+    let fuzzer_x_y_11_custom = 'fuzzer_x_y11_custom';
+    let fuzzer_x_y_12_custom = 'fuzzer_x_y12_custom';
+    let fuzzer_x_y_21_custom = 'fuzzer_x_y21_custom';
+    let fuzzer_x_y_22_custom = 'fuzzer_x_y22_custom';
+
+    let fuzzer_iframes = 'fuzzer_iframes';
+
+    switch(currentTestName){
+
+
+        case fuzzer_x:
+            return currentURL.replace(fuzzer_x, fuzzer_x_custom);
+        case fuzzer_x_custom:
+            return currentURL.replace(fuzzer_x_custom, fuzzer_x_native);
+
+        case fuzzer_x_native:
+            return currentURL.replace(fuzzer_x_native, fuzzer_x_native_custom);
+        case fuzzer_x_native_custom:
+            return currentURL.replace(fuzzer_x_native_custom, fuzzer_x_y_11);
+
+        case fuzzer_x_y_11:
+            return currentURL.replace(fuzzer_x_y_11, fuzzer_x_y_12);
+        case fuzzer_x_y_12:
+            return currentURL.replace(fuzzer_x_y_12, fuzzer_x_y_21);
+        case fuzzer_x_y_21:
+            return currentURL.replace(fuzzer_x_y_21, fuzzer_x_y_22);
+        case fuzzer_x_y_22:
+            return currentURL.replace(fuzzer_x_y_22, fuzzer_x_y_11_custom);
+
+
+        case fuzzer_x_y_11_custom:
+            return currentURL.replace(fuzzer_x_y_11_custom, fuzzer_x_y_12_custom);
+        case fuzzer_x_y_12_custom:
+            return currentURL.replace(fuzzer_x_y_12_custom, fuzzer_x_y_21_custom);
+        case fuzzer_x_y_21_custom:
+            return currentURL.replace(fuzzer_x_y_21_custom, fuzzer_x_y_22_custom);
+        case fuzzer_x_y_22_custom:
+            return currentURL.replace(fuzzer_x_y_22_custom, fuzzer_iframes);
+
+
+        default:
+            return -1;
+    }
+}
+
+sendData().then((response)=> {
+    console.log(response);
+    let nextTestUrl = getNextTestUrl()
+    if(nextTestUrl !== -1){
+        console.log('[+] moving to test:', nextTestUrl);
+        
+        setTimeout(()=> {
+            window.location.replace(nextTestUrl);
+        }, 3000);
+    }
+});
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+

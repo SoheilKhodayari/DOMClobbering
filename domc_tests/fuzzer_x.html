@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+
+<!-- area to append the test DOM clobbering payloads -->
+<div id="clobbering-payloads"></div>
+
+<script type="text/javascript">
+	
+
+var theDocument = window.document;
+/**
+ * List of HTML tags
+ * Fetch from: https://developer.mozilla.org/en-US/docs/Web/API/Window
+ */
+const html_tags = ["a", "abbr", "acronym", "address", "applet", "area", "article", "aside", "audio", "b", "base", "basefont", "bdi", "bdo", "bgsound", "big", "blink", "blockquote", "body", "br", "button", "canvas", "caption", "center", "cite", "code", "col", "colgroup", "command", "content", "data", "datalist", "dd", "del", "details", "dfn", "dialog", "dir", "div", "dl", "dt", "element", "em", "embed", "fieldset", "figcaption", "figure", "font", "footer", "form", "frame", "frameset", "h1", "head", "header", "hgroup", "hr", "html", "i", "image", "img", "input", "ins", "isindex", "kbd", "keygen", "label", "legend", "li", "link", "listing", "main", "map", "mark", "marquee", "menu", "menuitem", "meta", "meter", "multicol", "nav", "nextid", "nobr", "noembed", "noframes", "noscript", "object", "ol", "optgroup", "option", "output", "p", "param", "picture", "plaintext", "pre", "progress", "q", "rb", "rp", "rt", "rtc", "ruby", "s", "samp", "script", "section", "select", "shadow", "slot", "small", "source", "spacer", "span", "strike", "strong", "style", "sub", "summary", "sup", "svg", "table", "tbody", "td", "template", "textarea", "tfoot", "th", "thead", "time", "title", "tr", "track", "tt", "u", "ul", "var", "video", "wbr", "xmp"]; 
+
+const html_attributes=['href', 'nomodule', 'time', 'method', 'ontoggle', 'allowfullscreen', 'controls', 'loop', 'src', 'script', 'onkeyup', 'ondrag', 'border', 'as', 'input', 'pattern', 'rel', 'rows', 'sizes', 'onblur', 'onchange', 'meta', 'async', 'cols', 'source', 'alt', 'style', 'oncontextmenu', 'shape', 'enterkeyhint', 'textareaaccesskey', 'media', 'novalidate', 'hreflang', 'hidden', 'oncanplaythrough', 'formnovalidate', 'download', 'onerror', 'muted', 'imagesrcset', 'action', 'rowspan', 'ondragend', 'ondragstart', 'minlength', 'mayscript', 'defer', 'ins', 'scope', 'crossorigin', 'default', 'oninput', 'max', 'srcset', 'control', 'size', 'progress', 'onsuspend', 'itemscope', 'dirname', 'onplay', 'srcdoc', 'name', 'onratechange', 'loading', 'onseeking', 'select', 'is', 'onunload', 'li', 'preload', 'onoffline', 'onmouseup', 'open', 'onended', 'option', 'a', 'target', 'onmouseout', 'hspace', 'translate', 'oncopy', 'enctype', 'lang', 'onreset', 'sandbox', 'label', 'itemref', 'formenctype', 'headers', 'required', 'start', 'accept', 'onpause', 'low', 'charset', 'meter', 'object', 'integrity', 'param', 'disabled', 'ononline', 'del', 'map', 'onhashchange', 'audio', 'onmousedown', 'onselect', 'span', 'selected', 'imagesizes', 'base', 'Global Attributes', 'dir', 'onpageshow', 'onwheel', 'autocomplete', 'contenteditable', 'output', 'data-*', 'kind', 'textarea', 'onafterprint', 'nonce', 'srclang', 'frameBorder', 'for', 'onbeforeunload', 'poster', 'iframe', 'onbeforeprint', 'details', 'playsinline', 'optgroup', 'colgroup', 'onkeypress', 'onpaste', 'onkeydown', 'maxlength', 'draggable', 'id', 'oncuechange', 'wrap', 'ondurationchange', 'referrerpolicy', 'color', 'menu', 'ondragenter', 'oncanplay', 'itemprop', 'datetime', 'ondblclick', 'reversed', 'archive', 'formaction', 'noResize', 'onscroll', 'area', 'onsubmit', 'video', 'vspace', 'codebase', 'ondragleave', 'inputmode', 'scrolling', 'link', 'col', 'width', 'multiple', 'align', 'data', 'ismap', 'ol', 'onmouseover', 'placeholder', 'form', 'readonly', 'type', 'formtarget', 'autofocus', 'onplaying', 'high', 'onemptied', 'onmousemove', 'onseeked', 'http-equiv', 'autoplay', 'embed', 'onabort', 'body', 'onresize', 'onloadeddata', 'onvolumechange', 'oncut', 'step', 'ondrop', 'onwaiting', 'cite', 'ontimeupdate', 'img', 'marginHeight', 'itemtype', 'spellcheck', 'onsearch', 'onfocus', 'allow', 'oninvalid', 'onprogress', 'min', 'ondragover', 'marginWidth', 'longDesc', 'checked', 'tabindex', 'onmousewheel', 'fieldset', 'list', 'formmethod', 'onload', 'value', 'onclick', 'class', 'onloadstart', 'itemid', 'title', 'button', 'td', 'colspan', 'accept-charset', 'content', 'coords', 'onstalled', 'height', 'accesskey', 'optimum', 'th', 'code', 'onloadedmetadata', 'autocapitalize', 'usemap', 'widt', 'track'];
+
+/* a constant value to check if the clobbering was successful or not */
+const  DOM_CLOBBERING_SUCCESSFUL_VALUE = "DOM_CLOBBERING_SUCCESSFUL_VALUE";
+
+/* area to append the test DOM clobbering payloads */
+var clobbering_payload_area = theDocument.getElementById('clobbering-payloads');
+
+
+/* store the clobbering results in g_* global variables */
+var g_list_clobberable_x = [];
+var g_list_clobberable_window_x = [];
+var g_list_clobberable_document_x = [];
+
+
+if(typeof String.prototype.replaceAll === "undefined") {
+    String.prototype.replaceAll = function(match, replace) {
+       return this.replace(new RegExp(match, 'g'), () => replace);
+    }
+}
+
+
+/** 
+* @param html
+* @return removes the `data-value=DOM_CLOBBERING_SUCCESSFUL_VALUE` attribute from the input html and returns it.
+*/
+function cleanDomClobberingPayload(html){
+
+    let returnHtml = html.replaceAll(`data-value="${DOM_CLOBBERING_SUCCESSFUL_VALUE}"`).replaceAll(`data-value='${DOM_CLOBBERING_SUCCESSFUL_VALUE}'`).replaceAll('undefined', '');
+    
+    return returnHtml;
+}
+
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+
+function isWindowProxy(variable){
+
+    // Copied from AngularJS source code
+    // Thanks to: https://stackoverflow.com/questions/3099716/javascript-check-if-a-variable-is-the-window
+    if(variable && variable.document && variable.location && variable.alert && variable.setInterval){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+async function test_inclusion_for_x(html_tag, html_attr, clobbering_variable_x){
+
+    try{
+        var div = theDocument.createElement('div');
+        var html = `<${html_tag} ${html_attr}="${clobbering_variable_x}" data-value="${DOM_CLOBBERING_SUCCESSFUL_VALUE}"></${html_tag}>`
+
+        div.innerHTML = html;
+        // add the payload to DOM
+        clobbering_payload_area.appendChild(div);
+
+    }catch{
+        // PASS
+        // throws when we set an invalid value for an HTML attribute
+        // e.g., width=x where x is not a number.
+    }
+
+    if(html_tag != 'iframe'){
+
+        try{
+
+            // check: clobbering x
+            var clobbered_x = eval(`${clobbering_variable_x} && ${clobbering_variable_x}.getAttribute('data-value')`);
+            
+            // check: clobbering window.x
+            var clobbered_window_x = eval(`window.${clobbering_variable_x} && window.${clobbering_variable_x}.getAttribute('data-value')`)
+            
+            // check: clobbering document.x
+            var clobbered_document_x = eval(`document.${clobbering_variable_x} && document.${clobbering_variable_x}.getAttribute('data-value')`)
+
+
+        }
+        catch{
+            // handle the errors thrown due to clobbering failures and the variables not defined
+            var clobbered_x = null;
+            var clobbered_window_x = null;
+            var clobbered_document_x = null;
+        }
+
+        if(clobbered_x === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+
+            var result = {
+                "html": cleanDomClobberingPayload(html), 
+                "html_tag": html_tag,
+                "html_attribute": html_attr
+            };
+
+            g_list_clobberable_x.push(result);
+        }
+
+         if(clobbered_window_x === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+
+            var result = {
+                "html": cleanDomClobberingPayload(html), 
+                "html_tag": html_tag,
+                "html_attribute": html_attr
+            };
+            g_list_clobberable_window_x.push(result);
+        }
+        
+        if(clobbered_document_x === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+            
+            var result = {
+                "html": cleanDomClobberingPayload(html), 
+                "html_tag": html_tag,
+                "html_attribute": html_attr
+            };
+            g_list_clobberable_document_x.push(result);
+        }   
+
+        // remove the payload from DOM
+        clobbering_payload_area.removeChild(div);
+
+    }else{
+        // html_tag === 'iframe'
+
+        setTimeout(()=> {
+
+            try{
+
+                // check: clobbering x
+                var clobbered_x = eval(`${clobbering_variable_x}`);
+                
+                // check: clobbering window.x
+                var clobbered_window_x = eval(`window.${clobbering_variable_x}`)
+                
+                // check: clobbering document.x
+                var clobbered_document_x = eval(`document.${clobbering_variable_x}`)
+
+
+            }
+            catch{
+                // handle the errors thrown due to clobbering failures and the variables not defined
+                var clobbered_x = null;
+                var clobbered_window_x = null;
+                var clobbered_document_x = null;
+            }
+
+            if(isWindowProxy(clobbered_x) || (clobbered_x && clobbered_x.getAttribute && clobbered_x.getAttribute("data-value") === DOM_CLOBBERING_SUCCESSFUL_VALUE) ){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html), 
+                    "html_tag": html_tag,
+                    "html_attribute": html_attr
+                };
+
+                g_list_clobberable_x.push(result);
+            }
+
+             if(isWindowProxy(clobbered_window_x) || (clobbered_window_x && clobbered_window_x.getAttribute && clobbered_window_x.getAttribute("data-value") === DOM_CLOBBERING_SUCCESSFUL_VALUE)){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html), 
+                    "html_tag": html_tag,
+                    "html_attribute": html_attr
+                };
+                g_list_clobberable_window_x.push(result);
+            }
+            
+            if(isWindowProxy(clobbered_document_x) || (clobbered_document_x && clobbered_document_x.getAttribute && clobbered_document_x.getAttribute("data-value") === DOM_CLOBBERING_SUCCESSFUL_VALUE)){
+                
+                var result = {
+                    "html": cleanDomClobberingPayload(html), 
+                    "html_tag": html_tag,
+                    "html_attribute": html_attr
+                };
+                g_list_clobberable_document_x.push(result);
+            } 
+
+            // remove the payload from DOM
+            clobbering_payload_area.removeChild(div); 
+
+        }, 150);  
+
+    }
+
+}
+
+
+
+var count_tests = 1;
+function fuzzer_main(){
+
+    for(var html_tag of html_tags){        
+        for(var html_attr of html_attributes){
+            
+            count_tests+=1
+            test_inclusion_for_x(html_tag, html_attr, 'x');
+        }
+    }
+
+    // test iframe seprately with delay
+    for(var html_attr of ['id', 'name']){
+         test_inclusion_for_x('iframe', html_attr, 'x');
+         count_tests+=1
+    }
+}
+
+
+fuzzer_main();
+
+
+console.log('No of tests: '+ count_tests);
+// Note: use `copy(list_name)` for copying to clipboard from the browser console.
+console.log(g_list_clobberable_x)
+console.log(g_list_clobberable_window_x)
+console.log(g_list_clobberable_document_x);
+
+
+
+var data= {
+    "data": {
+        "total_tests": count_tests,
+        "clobberable_x": g_list_clobberable_x,
+        "clobberable_window_x": g_list_clobberable_window_x,
+        "clobberable_document_x": g_list_clobberable_document_x,
+    }
+}
+var postDataEndpoint = "{% url 'backend:post_domc_test' %}" + window.location.search;
+
+async function sendFinishSignal(){
+    
+    // add a node with id `DOMC_TESTS_FINISHED` to the DOM tree
+    // so that browser automation frameworks can check if the tests
+    // are finished or not
+
+    let label_id = 'DOMC_TESTS_FINISHED';
+    document.getElementById('clobbering-payloads').innerHTML = `<a id=${label_id}></a>`;
+
+}
+
+async function sendData(){
+
+    const response= await fetch(postDataEndpoint, {
+        method: 'POST',
+        body: JSON.stringify(data),
+    });
+
+    await sendFinishSignal();
+    return response.json();
+}
+
+
+function getNextTestUrl(){
+
+    let currentURL = ''+ window.location;
+    const params = new URLSearchParams(window.location.search);
+    let currentTestName = params.get('t');
+    
+    let fuzzer_x = 'fuzzer_x';
+    let fuzzer_x_custom = 'fuzzer_x_custom';
+    
+    let fuzzer_x_native = 'fuzzer_x_native';
+    let fuzzer_x_native_custom = 'fuzzer_x_native_custom';
+
+    let fuzzer_x_y_11 = 'fuzzer_x_y11';
+    let fuzzer_x_y_12 = 'fuzzer_x_y12';
+    let fuzzer_x_y_21 = 'fuzzer_x_y21';
+    let fuzzer_x_y_22 = 'fuzzer_x_y22';
+
+    let fuzzer_x_y_11_custom = 'fuzzer_x_y11_custom';
+    let fuzzer_x_y_12_custom = 'fuzzer_x_y12_custom';
+    let fuzzer_x_y_21_custom = 'fuzzer_x_y21_custom';
+    let fuzzer_x_y_22_custom = 'fuzzer_x_y22_custom';
+
+    let fuzzer_iframes = 'fuzzer_iframes';
+
+    switch(currentTestName){
+
+
+        case fuzzer_x:
+            return currentURL.replace(fuzzer_x, fuzzer_x_custom);
+        case fuzzer_x_custom:
+            return currentURL.replace(fuzzer_x_custom, fuzzer_x_native);
+
+        case fuzzer_x_native:
+            return currentURL.replace(fuzzer_x_native, fuzzer_x_native_custom);
+        case fuzzer_x_native_custom:
+            return currentURL.replace(fuzzer_x_native_custom, fuzzer_x_y_11);
+
+        case fuzzer_x_y_11:
+            return currentURL.replace(fuzzer_x_y_11, fuzzer_x_y_12);
+        case fuzzer_x_y_12:
+            return currentURL.replace(fuzzer_x_y_12, fuzzer_x_y_21);
+        case fuzzer_x_y_21:
+            return currentURL.replace(fuzzer_x_y_21, fuzzer_x_y_22);
+        case fuzzer_x_y_22:
+            return currentURL.replace(fuzzer_x_y_22, fuzzer_x_y_11_custom);
+
+
+        case fuzzer_x_y_11_custom:
+            return currentURL.replace(fuzzer_x_y_11_custom, fuzzer_x_y_12_custom);
+        case fuzzer_x_y_12_custom:
+            return currentURL.replace(fuzzer_x_y_12_custom, fuzzer_x_y_21_custom);
+        case fuzzer_x_y_21_custom:
+            return currentURL.replace(fuzzer_x_y_21_custom, fuzzer_x_y_22_custom);
+        case fuzzer_x_y_22_custom:
+            return currentURL.replace(fuzzer_x_y_22_custom, fuzzer_iframes);
+
+
+        default:
+            return -1;
+    }
+}
+
+
+setTimeout(()=> {
+
+    sendData().then((response)=> {
+        console.log(response);
+        let nextTestUrl = getNextTestUrl()
+        console.log(nextTestUrl)
+        if(nextTestUrl !== -1){
+            console.log('[+] moving to test:', nextTestUrl);
+            window.location.replace(nextTestUrl);
+        }
+    });
+
+}, 4000);
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+

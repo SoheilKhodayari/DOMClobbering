@@ -1,0 +1,2580 @@
+{
+    "total_tests": 318097,
+    "clobberable_x": [
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <button id=\"y\" id=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <button name=\"y\" id=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <button id=\"y\" name=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <button name=\"y\" name=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <fieldset id=\"y\" id=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <fieldset name=\"y\" id=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <fieldset id=\"y\" name=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <fieldset name=\"y\" name=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <image id=\"y\" id=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <image name=\"y\" id=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <image name=\"y\" name=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <img id=\"y\" id=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <img name=\"y\" id=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <img name=\"y\" name=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <input id=\"y\" id=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <input name=\"y\" id=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <input id=\"y\" name=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <input name=\"y\" name=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <object id=\"y\" id=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <object name=\"y\" id=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <object name=\"y\" name=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <output id=\"y\" id=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <output name=\"y\" id=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <output id=\"y\" name=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <output name=\"y\" name=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <select id=\"y\" id=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <select name=\"y\" id=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <select id=\"y\" name=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <select name=\"y\" name=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <textarea id=\"y\" id=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <textarea name=\"y\" id=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <textarea id=\"y\" name=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <textarea name=\"y\" name=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <form id=\"y\" name=\"x\" ></form>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "form",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        }
+    ],
+    "clobberable_window_x": [
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <button id=\"y\" id=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <button name=\"y\" id=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <button id=\"y\" name=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <button name=\"y\" name=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <fieldset id=\"y\" id=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <fieldset name=\"y\" id=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <fieldset id=\"y\" name=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <fieldset name=\"y\" name=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <image id=\"y\" id=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <image name=\"y\" id=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <image name=\"y\" name=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <img id=\"y\" id=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <img name=\"y\" id=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <img name=\"y\" name=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <input id=\"y\" id=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <input name=\"y\" id=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <input id=\"y\" name=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <input name=\"y\" name=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <object id=\"y\" id=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <object name=\"y\" id=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <object name=\"y\" name=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <output id=\"y\" id=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <output name=\"y\" id=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <output id=\"y\" name=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <output name=\"y\" name=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <select id=\"y\" id=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <select name=\"y\" id=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <select id=\"y\" name=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <select name=\"y\" name=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" id=\"y\">\n                <textarea id=\"y\" id=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "id=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <textarea name=\"y\" id=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <textarea id=\"y\" name=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <textarea name=\"y\" name=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <form id=\"y\" name=\"x\" ></form>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "form",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        }
+    ],
+    "clobberable_document_x": [
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <button id=\"y\" name=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <button name=\"y\" name=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <fieldset id=\"y\" name=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <fieldset name=\"y\" name=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <image name=\"y\" name=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <img name=\"y\" name=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <input id=\"y\" name=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <input name=\"y\" name=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <object name=\"y\" name=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <output id=\"y\" name=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <output name=\"y\" name=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <select id=\"y\" name=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <select name=\"y\" name=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <textarea id=\"y\" name=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" name=\"y\">\n                <textarea name=\"y\" name=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "name=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <form id=\"y\" name=\"x\" ></form>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "form",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        }
+    ],
+    "clobberable_x_x": [
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <button name=\"y\" id=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <button id=\"y\" name=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <fieldset name=\"y\" id=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <fieldset id=\"y\" name=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <image name=\"y\" id=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <img name=\"y\" id=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <input name=\"y\" id=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <input id=\"y\" name=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <object name=\"y\" id=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <output name=\"y\" id=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <output id=\"y\" name=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <select name=\"y\" id=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <select id=\"y\" name=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <textarea name=\"y\" id=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <textarea id=\"y\" name=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <form id=\"y\" name=\"x\" ></form>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "form",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        }
+    ],
+    "clobberable_window_x_x": [
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <button name=\"y\" id=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <button id=\"y\" name=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <fieldset name=\"y\" id=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <fieldset id=\"y\" name=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <image name=\"y\" id=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <img name=\"y\" id=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <input name=\"y\" id=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <input id=\"y\" name=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <object name=\"y\" id=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <output name=\"y\" id=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <output id=\"y\" name=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <select name=\"y\" id=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <select id=\"y\" name=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form id=\"x\" name=\"y\">\n                <textarea name=\"y\" id=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "id=x",
+                "name=y"
+            ],
+            "html_attribute2": [
+                "id=x",
+                "name=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <textarea id=\"y\" name=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <form id=\"y\" name=\"x\" ></form>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "form",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        }
+    ],
+    "clobberable_document_x_x": [
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <button id=\"y\" name=\"x\" ></button>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "button",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <fieldset id=\"y\" name=\"x\" ></fieldset>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "fieldset",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <input id=\"y\" name=\"x\" ></input>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "input",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <output id=\"y\" name=\"x\" ></output>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "output",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <select id=\"y\" name=\"x\" ></select>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "select",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <form name=\"x\" id=\"y\">\n                <textarea id=\"y\" name=\"x\" ></textarea>\n            </form>\n            ",
+            "html_tag1": "form",
+            "html_tag2": "textarea",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <embed id=\"y\" name=\"x\" ></embed>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "embed",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <form id=\"y\" name=\"x\" ></form>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "form",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <image id=\"y\" name=\"x\" ></image>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "image",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <img id=\"y\" name=\"x\" ></img>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "img",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        },
+        {
+            "html": "\n            <object name=\"x\" id=\"y\">\n                <object id=\"y\" name=\"x\" ></object>\n            </object>\n            ",
+            "html_tag1": "object",
+            "html_tag2": "object",
+            "html_attribute1": [
+                "name=x",
+                "id=y"
+            ],
+            "html_attribute2": [
+                "name=x",
+                "id=y"
+            ],
+            "relation_type": "child",
+            "return_value": "HTMLElement"
+        }
+    ]
+}

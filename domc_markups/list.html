@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>DOM Clobbering</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="author" content="">
+    <meta name="description" content="DOM Clobbering Wiki"> 
+    <link rel="shortcut icon" href="./../static/assets/images/favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="./../static/assets/css/theme-1.css">
+
+</head> 
+
+<body>
+    
+    <nav class="site-header sticky-top py-1">
+      <!-- <div class="nav-ribbon"></div> -->
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="#">
+            <img src="././../static/assets/images/logo.png" height="28px;" alt="DC">
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Wiki</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Payloads</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Browser Testing</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Payload Generator</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">GitHub</a>
+      </div>
+    </nav>
+
+
+    <div class="ribbon"></div>
+
+    <div class="position-relative overflow-hidden p-3 p-md-6 text-center bg-white">
+      <div class="col-md-6 p-lg-6 mx-auto my-6 mt-5">
+        <h1 class="display-5 font-weight-normal">DOM Clobbering Markups</h1>
+        <hr class="ribbon-yellow">        
+        <p class="ml-0"> Comprehensive List of DOM Clobbering Payloads for Mobile and Desktop Web Browsers</p>
+      </div>
+    </div>
+    
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-2">
+      <div class="row justify-content-center">
+
+        <div class="input-group col-md-6 mb-4">
+            <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search" id="search-table">
+            <span class="input-group-append">
+              <button class="btn btn-outline-secondary border-left-0 border" type="button" id="search-button">
+                    <i class="fa fa-search"></i>
+              </button>
+            </span>
+        </div>
+
+        <div class="col-auto text-nowrap" style="width: 1280px !important">
+          <table id="table-payloads" class="table table-responsive table-dark table-striped mx-auto w-auto" data-pagination=true style="border-radius: .25em;"  data-page-size="50" >
+            <!-- data-search="true" data-strict-search="true" data-filter-strict-search="true" -->
+            <thead>
+              <tr> <!--  class="tr-table-header" -->
+                <th class="" data-field="id">#</th>
+                <th class="" data-field="Markup">Markup</th>
+                <th class="table-red-col" data-field="Clobbered" data-sortable="true">Clobbered<i class="fas fa-sort" style="margin-left:7px"></i></th>
+                <th class="table-yellow-col" data-field="Tag1" data-sortable="true">Tag1 <i class="fas fa-sort" style="margin-left:7px"></i></th>
+                <th class="table-yellow-col" data-field="Tag2" data-sortable="true">Tag2 <i class="fas fa-sort" style="margin-left:7px"></i></th>
+                <th class="table-dark-red-col" data-field="Attributes1" data-sortable="true">Attributes1 <i class="fas fa-sort" style="margin-left:7px"></i></th>
+                <th class="table-dark-red-col" data-field="Attributes2" data-sortable="true">Attributes2 <i class="fas fa-sort" style="margin-left:7px"></i></th>
+                <th class="" data-field="RelationType" data-sortable="true">Rel. Type <i class="fas fa-sort" style="margin-left:7px"></i></th>
+                <th class="table-blue-col" data-field="ReferenceType" data-sortable="true">Ref. Type <i class="fas fa-sort" style="margin-left:7px"></i></th>
+
+                <th class="" data-field="Firefox-iOS_39.0" >Firefox iOS_39.0</th>
+                <th class="" data-field="Safari-iOS_14.7.1" >Safari iOS 14.7</th>
+                <th class="" data-field="Chrome-iOS_92.0.4515.90" >Chrome iOS 92.0</th>
+                <th class="" data-field="Opera-iOS_3.2.3" >Opera iOS 3.2</th>
+                  <th class="" data-field="Edge-iOS_95.0.1020.47" >Edge iOS 95.0</th>
+
+
+                <th class="" data-field="Chrome-Desktop_96" >Chrome 96.0</th>
+                 <th class="" data-field="Firefox-Desktop_95.0" >Firefox 95.0</th>
+                <th class="" data-field="Opera-Desktop_82.0.4227.23" >Opera 82.0</th>
+                
+               
+                <th class="" data-field="Safari-Desktop_15.1" >Safari 15.1</th>
+                <th class="" data-field="Safari-Desktop_14.1" >Safari 14.1</th>
+                <th class="" data-field="Safari-Desktop_13.1" >Safari 13.1</th>
+                <th class="" data-field="TorBrowser-Desktop_11.0.1-mozilla91.3.0esr" >TorBrowser 11.0.1</th>
+                  <th class="" data-field="Edge-Desktop_96.0.1054.43" >Edge 96.0</th>
+
+
+                <th class="" data-field="UCBrowser-Android_13.3.8.1305" >UCBrowser 13.3</th>
+                <th class="" data-field="Firefox-Android_94.1.2" >Firefox Andr. 94.1</th>
+                <th class="" data-field="Chrome-Android_95.0.4638.74" >Opera Andr. 95.0</th>
+                <th class="" data-field="Edge-Android_95.0.1020.48" >Edge Andr. 95.0</th>
+                <th class="" data-field="SamsungInt-Android_15.0.6.3" >Samsung Int 15.0</th>
+                <th class="" data-field="Opera-Android_65.2.3381.61420" >Opera Andr. 65.2</th>
+                
+              
+
+              </tr>
+            </thead>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+     <div class="ribbon"></div>
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img src="././../static/assets/images/logo.png" height="28px;" style="margin-bottom: 5px;"alt="DC">
+          <small class="d-block mb-3 text-muted">&copy; 2022-2023</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>DOM Clobbring</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Overview</a></li>
+            <li><a class="text-muted" href="#">Techniques</a></li>
+            <li><a class="text-muted" href="#">Code Patterns</a></li>
+            <li><a class="text-muted" href="#">Defenses</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Website</a></li>
+            <li><a class="text-muted" href="#">Browser Testing</a></li>
+            <li><a class="text-muted" href="#">Payload Generator</a></li>
+            <li><a class="text-muted" href="#">Vulnerability Detector</a></li>
+
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">License</a></li>
+            <li><a class="text-muted" href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+         <div class="col-12 col-md text-center">
+            <p class="text-center" style="margin-top: 5px;"><small>Licensed under AGPL-3.0, open source and free to use.</small></p>
+        </div>
+      </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->   
+    <script src="./../static/assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./../static/assets/js/lib/jquery-slim.min.js"><\/script>')</script>
+    <script src="./../static/assets/js/lib/popper.min.js"></script> 
+    <script src="./../static/assets/js/lib/bootstrap.min.js"></script> 
+    <script src="./../static/assets/js/lib/bootstrap.tables.js"></script>
+    <script src="./../static/assets/js/lib/holder.min.js"></script> 
+    <script src="./../static/assets/js/lib/papaparse.min.js" type="text/javascript"></script>
+
+
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+
+    <script src="./../static/assets/js/markups.js" type="text/javascript"></script>
+
+
+    
+
+</body>
+</html> 
+

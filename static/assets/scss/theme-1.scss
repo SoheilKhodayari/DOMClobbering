@@ -1,0 +1,27 @@
+/*************************** Theme Colours****************************/
+// Define theme colour scheme
+
+$theme-yellow: #eadf1d;
+$theme-pink: #ea1d5d;
+$theme-dark-brown: #3c3633;
+$theme-color: $theme-pink;
+$theme-color-light: lighten($theme-pink, 30%);
+
+
+/*************************** Variables Section. *****************************/
+
+$bootstrap-warning: #ffc107;
+
+$theme-colors: (
+  "warning":  lighten($bootstrap-warning, 10%),
+);
+
+
+
+/*************************** Import Bootstrap  *****************************/
+@import "bootstrap/scss/bootstrap.scss";
+
+
+/*************************** Theme Styles Section ****************************/
+@import "theme/styles.scss"
+

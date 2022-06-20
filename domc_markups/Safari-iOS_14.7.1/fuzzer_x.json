@@ -1,0 +1,139 @@
+{
+    "total_tests": 34023,
+    "clobberable_x": [
+        {
+            "html": "<a id=\"x\" ></a>",
+            "html_tag": "a",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<abbr id=\"x\" ></abbr>",
+            "html_tag": "abbr",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<acronym id=\"x\" ></acronym>",
+            "html_tag": "acronym",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<address id=\"x\" ></address>",
+            "html_tag": "address",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<applet id=\"x\" ></applet>",
+            "html_tag": "applet",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<area id=\"x\" ></area>",
+            "html_tag": "area",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<article id=\"x\" ></article>",
+            "html_tag": "article",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<iframe id=\"x\" ></iframe>",
+            "html_tag": "iframe",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<iframe name=\"x\" ></iframe>",
+            "html_tag": "iframe",
+            "html_attribute": "name"
+        }
+    ],
+    "clobberable_window_x": [
+        {
+            "html": "<a id=\"x\" ></a>",
+            "html_tag": "a",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<abbr id=\"x\" ></abbr>",
+            "html_tag": "abbr",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<acronym id=\"x\" ></acronym>",
+            "html_tag": "acronym",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<address id=\"x\" ></address>",
+            "html_tag": "address",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<applet id=\"x\" ></applet>",
+            "html_tag": "applet",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<area id=\"x\" ></area>",
+            "html_tag": "area",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<article id=\"x\" ></article>",
+            "html_tag": "article",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<iframe id=\"x\" ></iframe>",
+            "html_tag": "iframe",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<iframe name=\"x\" ></iframe>",
+            "html_tag": "iframe",
+            "html_attribute": "name"
+        }
+    ],
+    "clobberable_document_x": [
+        {
+            "html": "<embed name=\"x\" ></embed>",
+            "html_tag": "embed",
+            "html_attribute": "name"
+        },
+        {
+            "html": "<form name=\"x\" ></form>",
+            "html_tag": "form",
+            "html_attribute": "name"
+        },
+        {
+            "html": "<image name=\"x\" ></image>",
+            "html_tag": "image",
+            "html_attribute": "name"
+        },
+        {
+            "html": "<img name=\"x\" ></img>",
+            "html_tag": "img",
+            "html_attribute": "name"
+        },
+        {
+            "html": "<object name=\"x\" ></object>",
+            "html_tag": "object",
+            "html_attribute": "name"
+        },
+        {
+            "html": "<object id=\"x\" ></object>",
+            "html_tag": "object",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<iframe id=\"x\" ></iframe>",
+            "html_tag": "iframe",
+            "html_attribute": "id"
+        },
+        {
+            "html": "<iframe name=\"x\" ></iframe>",
+            "html_tag": "iframe",
+            "html_attribute": "name"
+        }
+    ]
+}

@@ -1,0 +1,3933 @@
+{
+    "clobberable_window_properties": {
+        "caches": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "closed": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "console": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "controllers": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"controllers\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"controllers\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "crossOriginIsolated": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"crossOriginIsolated\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"crossOriginIsolated\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "crypto": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "customElements": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "defaultStatus": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "devicePixelRatio": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "dialogArguments": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"dialogArguments\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"dialogArguments\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "directories": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"directories\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"directories\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "document": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "event": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "frameElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "frames": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "fullScreen": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"fullScreen\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"fullScreen\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "history": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "indexedDB": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "innerHeight": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "innerWidth": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "isSecureContext": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "length": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "localStorage": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "location": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "locationbar": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "menubar": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "mozAnimationStartTime": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"mozAnimationStartTime\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"mozAnimationStartTime\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "mozInnerScreenX": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"mozInnerScreenX\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"mozInnerScreenX\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "mozInnerScreenY": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"mozInnerScreenY\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"mozInnerScreenY\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "name": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "navigator": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onabort": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onafterprint": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onanimationcancel": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onanimationend": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onanimationiteration": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onappinstalled": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onappinstalled\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onappinstalled\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onauxclick": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onauxclick\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onauxclick\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onbeforeinstallprompt": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onbeforeinstallprompt\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onbeforeinstallprompt\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onbeforeprint": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onbeforeunload": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onblur": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "oncancel": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"oncancel\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"oncancel\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "oncanplay": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "oncanplaythrough": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onchange": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onclick": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onclose": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onclose\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onclose\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "oncontextmenu": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "oncuechange": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "ondblclick": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "ondevicemotion": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"ondevicemotion\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"ondevicemotion\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "ondeviceorientation": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"ondeviceorientation\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"ondeviceorientation\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "ondeviceorientationabsolute": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"ondeviceorientationabsolute\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"ondeviceorientationabsolute\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "ondragdrop": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"ondragdrop\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"ondragdrop\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "ondurationchange": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onended": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onerror": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onfocus": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onformdata": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onformdata\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onformdata\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "ongamepadconnected": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"ongamepadconnected\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"ongamepadconnected\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "ongamepaddisconnected": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"ongamepaddisconnected\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"ongamepaddisconnected\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "ongotpointercapture": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onhashchange": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "oninput": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "oninvalid": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onkeydown": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onkeypress": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onkeyup": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onlanguagechange": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onload": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onloadeddata": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onloadedmetadata": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onloadend": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onloadend\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onloadend\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onloadstart": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onlostpointercapture": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onmessage": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onmessageerror": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onmessageerror\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onmessageerror\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onmousedown": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onmouseenter": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onmouseleave": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onmousemove": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onmouseout": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onmouseover": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onmouseup": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onpaint": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onpaint\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onpaint\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onpause": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onplay": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onplaying": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onpointercancel": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onpointerdown": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onpointerenter": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onpointerleave": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onpointermove": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onpointerout": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onpointerover": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onpointerup": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onpopstate": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onrejectionhandled": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onreset": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onresize": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onscroll": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onselect": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onselectionchange": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onselectstart": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onstorage": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onsubmit": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "ontouchcancel": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"ontouchcancel\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"ontouchcancel\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "ontouchstart": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"ontouchstart\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"ontouchstart\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "ontransitioncancel": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "ontransitionend": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onunhandledrejection": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onunload": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "onvrdisplayactivate": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplayactivate\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplayactivate\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onvrdisplayblur": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplayblur\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplayblur\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onvrdisplayconnect": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplayconnect\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplayconnect\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onvrdisplaydeactivate": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplaydeactivate\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplaydeactivate\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onvrdisplaydisconnect": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplaydisconnect\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplaydisconnect\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onvrdisplayfocus": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplayfocus\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplayfocus\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onvrdisplaypointerrestricted": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplaypointerrestricted\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplaypointerrestricted\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onvrdisplaypointerunrestricted": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplaypointerunrestricted\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplaypointerunrestricted\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onvrdisplaypresentchange": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplaypresentchange\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"onvrdisplaypresentchange\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "onwheel": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "opener": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "origin": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "outerHeight": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "outerWidth": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "pageXOffset": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "pageYOffset": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "parent": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "performance": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "personalbar": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "pkcs11": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"pkcs11\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"pkcs11\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "screen": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "screenLeft": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "screenTop": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "screenX": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "screenY": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "scrollbars": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "scrollMaxX": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"scrollMaxX\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"scrollMaxX\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "scrollMaxY": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"scrollMaxY\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"scrollMaxY\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "scrollX": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "scrollY": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "self": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "sessionStorage": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "sidebar": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"sidebar\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"sidebar\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "speechSynthesis": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "status": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "statusbar": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "toolbar": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "top": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "visualViewport": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "DOMParser": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Notification": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Math": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Worker": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Reflect": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "FileReader": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "constructor": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "setTimeout": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "setInterval": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Promise": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "eval": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Proxy": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "decodeURIComponent": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "encodeURIComponent": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "decodeURI": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "encodeURI": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "dataLayer": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"dataLayer\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"dataLayer\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "escape": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "unescape": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "isFinite": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "parseInt": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "parseFloat": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "MessageChannel": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Request": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "XMLHttpRequest": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "XDomainRequest": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"XDomainRequest\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"XDomainRequest\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "ActiveXObject": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"ActiveXObject\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"ActiveXObject\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "fetch": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "WebSocket": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "AbortSignal": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "attachEvent": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"attachEvent\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"attachEvent\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "MouseEvent": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Touch": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"Touch\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"Touch\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "TouchEvent": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"TouchEvent\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"TouchEvent\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "CustomEvent": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Event": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "EventTarget": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "EventEmitter": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"EventEmitter\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"EventEmitter\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "EventSource": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "ResizeObserver": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "ReportingObserver": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"ReportingObserver\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"ReportingObserver\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "IntersectionObserver": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "PerformanceObserver": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "MutationObserver": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "TextDecoder": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "TextEncoder": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Node": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Element": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLDocument": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLTemplateElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLIFrameElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLInputElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLAnchorElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLButtonElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLLinkElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLImageElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLEmbedElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLFrameElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLObjectElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "HTMLScriptElement": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "NamedNodeMap": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "NodeList": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "SVGRect": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "MediaSource": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "CSSRule": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "CSSStyleDeclaration": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "CSSStyleSheet": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "CSSStyleRule": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "chrome": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"chrome\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"chrome\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "safari": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "firefoxAccessException": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"firefoxAccessException\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"firefoxAccessException\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "trustedTypes": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"trustedTypes\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"trustedTypes\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "HTMLCollection": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "WeakMap": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "WeakSet": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "JSON": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Symbol": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Boolean": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Object": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "String": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Array": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Image": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Number": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Function": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Map": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Date": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "undefined": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "null": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"null\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "Float64Array": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Float32Array": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Uint8ClampedArray": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Uint16Array": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Uint32Array": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Int16Array": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Int32Array": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Int8Array": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Uint8Array": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "ArrayBuffer": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "SharedArrayBuffer": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"SharedArrayBuffer\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"SharedArrayBuffer\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "Blob": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "FormData": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "URLSearchParams": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "ReferenceError": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "RangeError": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "SyntaxError": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Error": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "TypeError": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "RegExp": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "arguments": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "globalThis": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "Infinity": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        }
+    },
+    "clobberable_window_methods": {
+        "alert": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "atob": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "blur": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "btoa": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "cancelAnimationFrame": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "cancelIdleCallback": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"cancelIdleCallback\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"cancelIdleCallback\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "captureEvents": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "clearImmediate": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"clearImmediate\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"clearImmediate\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "clearInterval": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "clearTimeout": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "close": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "confirm": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "convertPointFromNodeToPage": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"convertPointFromNodeToPage\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"convertPointFromNodeToPage\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "convertPointFromPageToNode": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"convertPointFromPageToNode\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"convertPointFromPageToNode\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "createImageBitmap": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"createImageBitmap\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"createImageBitmap\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "dump": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"dump\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"dump\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "fetch": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "find": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "focus": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "getComputedStyle": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "getDefaultComputedStyle": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"getDefaultComputedStyle\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"getDefaultComputedStyle\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "getSelection": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "home": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"home\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"home\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "matchMedia": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "minimize": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"minimize\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"minimize\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "moveBy": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "moveTo": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "open": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "openDialog": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"openDialog\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"openDialog\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "postMessage": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "print": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "prompt": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "queueMicrotask": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "releaseEvents": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "requestAnimationFrame": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "requestIdleCallback": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"requestIdleCallback\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"requestIdleCallback\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "resizeBy": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "resizeTo": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "routeEvent": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"routeEvent\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"routeEvent\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "scroll": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "scrollBy": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "scrollByLines": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"scrollByLines\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"scrollByLines\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "scrollByPages": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"scrollByPages\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"scrollByPages\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "scrollTo": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "setCursor": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"setCursor\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"setCursor\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "setImmediate": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"setImmediate\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"setImmediate\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "setInterval": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "setTimeout": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "showDirectoryPicker": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"showDirectoryPicker\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"showDirectoryPicker\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "showModalDialog": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "showOpenFilePicker": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"showOpenFilePicker\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"showOpenFilePicker\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "showSaveFilePicker": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"showSaveFilePicker\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"showSaveFilePicker\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "sizeToContent": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"sizeToContent\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"sizeToContent\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "stop": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "updateCommands": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"updateCommands\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"updateCommands\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "addEventListener": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        }
+    },
+    "clobberable_window_events": {
+        "event": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "afterprint": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"afterprint\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"afterprint\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "animationcancel": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"animationcancel\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"animationcancel\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "animationend": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"animationend\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"animationend\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "animationiteration": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"animationiteration\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"animationiteration\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "beforeprint": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"beforeprint\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"beforeprint\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "beforeunload": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"beforeunload\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"beforeunload\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "blur": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "copy": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"copy\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"copy\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "cut": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"cut\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"cut\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "DOMContentLoaded": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"DOMContentLoaded\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"DOMContentLoaded\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "error": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"error\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"error\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "focus": {
+            "count_tests": 3,
+            "clobberable_x": [],
+            "clobberable_window_x": []
+        },
+        "hashchange": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"hashchange\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"hashchange\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "languagechange": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"languagechange\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"languagechange\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "load": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"load\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"load\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "message": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"message\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"message\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "messageerror": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"messageerror\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"messageerror\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "offline": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"offline\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"offline\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "online": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"online\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"online\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "orientationchange": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"orientationchange\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"orientationchange\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "pagehide": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"pagehide\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"pagehide\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "pageshow": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"pageshow\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"pageshow\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "paste": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"paste\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"paste\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "popstate": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"popstate\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"popstate\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "rejectionhandled": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"rejectionhandled\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"rejectionhandled\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "storage": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"storage\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"storage\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "transitioncancel": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"transitioncancel\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"transitioncancel\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "unhandledrejection": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"unhandledrejection\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"unhandledrejection\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "unload": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"unload\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"unload\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "vrdisplayconnect": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"vrdisplayconnect\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"vrdisplayconnect\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "vrdisplaydisconnect": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"vrdisplaydisconnect\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"vrdisplaydisconnect\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        },
+        "vrdisplaypresentchange": {
+            "count_tests": 3,
+            "clobberable_x": [
+                {
+                    "html": "<customtag id=\"vrdisplaypresentchange\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ],
+            "clobberable_window_x": [
+                {
+                    "html": "<customtag id=\"vrdisplaypresentchange\" ></customtag>",
+                    "html_tag": "customtag",
+                    "html_attribute": "id"
+                }
+            ]
+        }
+    },
+    "clobberable_document_properties": {
+        "activeElement": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "alinkColor": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "all": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "anchors": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "applets": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "bgColor": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "body": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "characterSet": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "childElementCount": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "children": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "compatMode": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "contentType": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "currentScript": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "defaultView": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "designMode": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "dir": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "doctype": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "documentElement": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "documentURI": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "documentURIObject": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "domain": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "embeds": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "fgColor": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "firstElementChild": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "forms": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "fullscreen": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "fullscreenElement": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "fullscreenEnabled": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "head": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "height": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "hidden": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "images": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "implementation": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "lastElementChild": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "lastModified": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "lastStyleSheetSet": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "linkColor": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "links": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "location": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "mozSyntheticDocument": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onabort": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onafterscriptexecute": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onanimationcancel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onanimationend": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onanimationiteration": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onauxclick": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onbeforescriptexecute": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onblur": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "oncancel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "oncanplay": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "oncanplaythrough": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onchange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onclick": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onclose": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "oncontextmenu": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "oncuechange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "ondblclick": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "ondurationchange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onended": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onerror": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onfocus": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onformdata": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onfullscreenchange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onfullscreenerror": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "ongotpointercapture": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "oninput": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "oninvalid": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onkeydown": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onkeypress": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onkeyup": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onload": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onloadeddata": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onloadedmetadata": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onloadend": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onloadstart": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onlostpointercapture": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onmousedown": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onmouseenter": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onmouseleave": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onmousemove": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onmouseout": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onmouseover": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onmouseup": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onoffline": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "ononline": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onpause": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onplay": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onplaying": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onpointercancel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onpointerdown": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onpointerenter": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onpointerleave": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onpointermove": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onpointerout": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onpointerover": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onpointerup": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onreset": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onresize": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onscroll": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onselect": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onselectionchange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onselectstart": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onsubmit": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "ontouchcancel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "ontouchstart": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "ontransitioncancel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "ontransitionend": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onvisibilitychange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "onwheel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pictureInPictureElement": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pictureInPictureEnabled": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "plugins": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointerLockElement": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "popupNode": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "preferredStyleSheetSet": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "readyState": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "referrer": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "rootElement": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "scripts": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "scrollingElement": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "selectedStyleSheetSet": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "styleSheets": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "styleSheetSets": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "timeline": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "title": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "tooltipNode": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "URL": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "visibilityState": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "vlinkColor": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "width": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "xmlEncoding": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "xmlVersion": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        }
+    },
+    "clobberable_document_methods": {
+        "adoptNode": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "append": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "caretPositionFromPoint": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "caretRangeFromPoint": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "clear": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "close": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createAttribute": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createCDATASection": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createComment": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createDocumentFragment": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createElement": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createElementNS": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createEntityReference": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createEvent": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createExpression": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createNodeIterator": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createNSResolver": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createProcessingInstruction": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createRange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createTextNode": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createTouch": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createTouchList": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "createTreeWalker": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "elementFromPoint": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "elementsFromPoint": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "enableStyleSheetsForSet": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "evaluate": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "execCommand": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "exitFullscreen": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "exitPictureInPicture": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "exitPointerLock": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "getAnimations": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "getBoxObjectFor": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "getElementById": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "getElementsByClassName": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "getElementsByName": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "getElementsByTagName": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "getElementsByTagNameNS": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "getSelection": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "hasFocus": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "hasStorageAccess": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "importNode": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "mozSetImageElement": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "open": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "prepend": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "queryCommandEnabled": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "queryCommandSupported": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "querySelector": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "querySelectorAll": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "registerElement": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "releaseCapture": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "replaceChildren": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "requestStorageAccess": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "write": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "writeln": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "addEventListener": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        }
+    },
+    "clobberable_document_events": {
+        "animationcancel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "animationend": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "animationiteration": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "animationstart": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "copy": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "cut": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "DOMContentLoaded": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "drag": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "dragend": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "dragenter": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "dragleave": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "dragover": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "dragstart": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "drop": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "fullscreenchange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "fullscreenerror": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "gotpointercapture": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "keydown": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "keypress": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "keyup": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "lostpointercapture": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "paste": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointercancel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointerdown": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointerenter": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointerleave": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointerlockchange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointerlockerror": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointermove": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointerout": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointerover": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "pointerup": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "readystatechange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "scroll": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "selectionchange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "selectstart": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "touchcancel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "touchend": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "touchmove": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "touchstart": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "transitioncancel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "transitionend": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "transitionrun": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "transitionstart": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "visibilitychange": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        },
+        "wheel": {
+            "count_tests": 3,
+            "clobberable_document_x": []
+        }
+    }
+}

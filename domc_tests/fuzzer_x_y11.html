@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+
+<!-- area to append the test DOM clobbering payloads -->
+<div id="clobbering-payloads"></div>
+
+<script type="text/javascript">
+
+var theDocument = window.document;
+/**
+ * List of HTML tags
+ * Fetch from: https://developer.mozilla.org/en-US/docs/Web/API/Window
+ */
+const CONST_HTML_TAGS = ["a", "abbr", "acronym", "address", "applet", "area", "article", "aside", "audio", "b", "base", "basefont", "bdi", "bdo", "bgsound", "big", "blink", "blockquote", "body", "br", "button", "canvas", "caption", "center", "cite", "code", "col", "colgroup", "command", "content", "data", "datalist", "dd", "del", "details", "dfn", "dialog", "dir", "div", "dl", "dt", "element", "em", "embed", "fieldset", "figcaption", "figure", "font", "footer", "form", "frame", "frameset", "h1", "head", "header", "hgroup", "hr", "html", "i", "iframe", "image", "img", "input", "ins", "isindex", "kbd", "keygen", "label", "legend", "li", "link", "listing", "main", "map", "mark", "marquee", "menu", "menuitem", "meta", "meter", "multicol", "nav", "nextid", "nobr", "noembed", "noframes", "noscript", "object", "ol", "optgroup", "option", "output", "p", "param", "picture", "plaintext", "pre", "progress", "q", "rb", "rp", "rt", "rtc", "ruby", "s", "samp", "script", "section", "select", "shadow", "slot", "small", "source", "spacer", "span", "strike", "strong", "style", "sub", "summary", "sup", "svg", "table", "tbody", "td", "template", "textarea", "tfoot", "th", "thead", "time", "title", "tr", "track", "tt", "u", "ul", "var", "video", "wbr", "xmp"]; // length: 141 
+
+
+// length: 242 + 1 (for data-*)
+const CONST_HTML_ATTRIBUTES=['href', 'nomodule', 'time', 'method', 'ontoggle', 'allowfullscreen', 'controls', 'loop', 'src', 'script', 'onkeyup', 'ondrag', 'border', 'as', 'input', 'pattern', 'rel', 'rows', 'sizes', 'onblur', 'onchange', 'meta', 'async', 'cols', 'source', 'alt', 'style', 'oncontextmenu', 'shape', 'enterkeyhint', 'textareaaccesskey', 'media', 'novalidate', 'hreflang', 'hidden', 'oncanplaythrough', 'formnovalidate', 'download', 'onerror', 'muted', 'imagesrcset', 'action', 'rowspan', 'ondragend', 'ondragstart', 'minlength', 'mayscript', 'defer', 'ins', 'scope', 'crossorigin', 'default', 'oninput', 'max', 'srcset', 'control', 'size', 'progress', 'onsuspend', 'itemscope', 'dirname', 'onplay', 'srcdoc', 'name', 'onratechange', 'loading', 'onseeking', 'select', 'is', 'onunload', 'li', 'preload', 'onoffline', 'onmouseup', 'open', 'onended', 'option', 'a', 'target', 'onmouseout', 'hspace', 'translate', 'oncopy', 'enctype', 'lang', 'onreset', 'sandbox', 'label', 'itemref', 'formenctype', 'headers', 'required', 'start', 'accept', 'onpause', 'low', 'charset', 'meter', 'object', 'integrity', 'param', 'disabled', 'ononline', 'del', 'map', 'onhashchange', 'audio', 'onmousedown', 'onselect', 'span', 'selected', 'imagesizes', 'base', 'Global Attributes', 'dir', 'onpageshow', 'onwheel', 'autocomplete', 'contenteditable', 'output', 'kind', 'textarea', 'onafterprint', 'nonce', 'srclang', 'frameBorder', 'for', 'onbeforeunload', 'poster', 'iframe', 'onbeforeprint', 'details', 'playsinline', 'optgroup', 'colgroup', 'onkeypress', 'onpaste', 'onkeydown', 'maxlength', 'draggable', 'id', 'oncuechange', 'wrap', 'ondurationchange', 'referrerpolicy', 'color', 'menu', 'ondragenter', 'oncanplay', 'itemprop', 'datetime', 'ondblclick', 'reversed', 'archive', 'formaction', 'noResize', 'onscroll', 'area', 'onsubmit', 'video', 'vspace', 'codebase', 'ondragleave', 'inputmode', 'scrolling', 'link', 'col', 'width', 'multiple', 'align', 'data', 'ismap', 'ol', 'onmouseover', 'placeholder', 'form', 'readonly', 'type', 'formtarget', 'autofocus', 'onplaying', 'high', 'onemptied', 'onmousemove', 'onseeked', 'http-equiv', 'autoplay', 'embed', 'onabort', 'body', 'onresize', 'onloadeddata', 'onvolumechange', 'oncut', 'step', 'ondrop', 'onwaiting', 'cite', 'ontimeupdate', 'img', 'marginHeight', 'itemtype', 'spellcheck', 'onsearch', 'onfocus', 'allow', 'oninvalid', 'onprogress', 'min', 'ondragover', 'marginWidth', 'longDesc', 'checked', 'tabindex', 'onmousewheel', 'fieldset', 'list', 'formmethod', 'onload', 'value', 'onclick', 'class', 'onloadstart', 'itemid', 'title', 'button', 'td', 'colspan', 'accept-charset', 'content', 'coords', 'onstalled', 'height', 'accesskey', 'optimum', 'th', 'code', 'onloadedmetadata', 'autocapitalize', 'usemap', 'widt', 'track']; // + 'data-*' 
+
+
+/** 
+* @reference SPEC 3.2.6 
+* URL: https://html.spec.whatwg.org/#global-attributes
+**/
+const CONST_GLOBAL_ATTRIBUTES = [
+    "accesskey",
+    "autocapitalize",
+    "autofocus",
+    "contenteditable",
+    "dir",
+    "draggable",
+    "enterkeyhint",
+    "hidden",
+    "inputmode",
+    "is",
+    "itemid",
+    "itemprop",
+    "itemref",
+    "itemscope",
+    "itemtype",
+    "lang",
+    "nonce",
+    "spellcheck",
+    "style",
+    "tabindex",
+    "title",
+    "translate",
+    "name",
+    "id"
+];
+
+const CONST_SCRIPT_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "src",
+    "type",
+    "nomodule",
+    "async",
+    "defer",
+    "crossorigin",
+    "integrity",
+    "referrerpolicy"
+]);
+
+const CONST_VIDEO_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "src",
+    "crossorigin",
+    "poster",
+    "preload",
+    "autoplay",
+    "playsinline",
+    "loop",
+    "muted",
+    "control",
+    "width",
+    "height",
+]);
+
+const CONST_AUDIO_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "src",
+    "crossorigin",
+    "preload",
+    "autoplay",
+    "loop",
+    "muted",
+    "controls",
+]);
+
+
+const CONST_TRACK_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "kind",
+    "src",
+    "srclang",
+    "label",
+    "default"
+]);
+
+const CONST_SOURCE_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "type",
+    "src",
+    "srcset",
+    "sizes",
+    "media",
+    "width",
+    "height"
+]);
+
+const CONST_OBJECT_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "data",
+    "type",
+    "name",
+    "form",
+    "width",
+    "height"
+]);
+
+const CONST_LINK_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "href",
+    "crossorigin",
+    "rel",
+    "media",
+    "integrity",
+    "hreflang",
+    "type",
+    "referrerpolicy",
+    "sizes",
+    "imagesrcset",
+    "imagesizes",
+    "as",
+    "color",
+    "disabled",
+    "title"
+]);
+
+const CONST_INPUT_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "accept",
+    "alt",
+    "autocomplete",
+    "checked",
+    "dirname",
+    "disabled",
+    "form",
+    "formaction",
+    "formenctype",
+    "formmethod",
+    "formnovalidate",
+    "formtarget",
+    "height",
+    "list",
+    "max",
+    "maxlength",
+    "min",
+    "minlength",
+    "multiple",
+    "name",
+    "pattern",
+    "placeholder",
+    "readonly",
+    "required",
+    "size",
+    "src",
+    "step",
+    "type",
+    "value",
+    "width",
+    "title"
+]);
+
+const CONST_IMG_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "alt",
+    "src",
+    "srcset",
+    "sizes",
+    "crossorigin",
+    "usemap",
+    "ismap",
+    "width",
+    "height",
+    "referrerpolicy",
+    "decoding",
+    "loading"
+]);
+
+const CONST_IFRAME_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "src",
+    "srcdoc",
+    "name",
+    "sandbox",
+    "allow",
+    "allowfullscreen",
+    "width",
+    "height",
+    "referrerpolicy",
+    "loading"
+]);
+
+const CONST_FRAME_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "name",
+    "scrolling",
+    "src",
+    "frameBorder",
+    "longDesc",
+    "noResize",
+    "marginHeight",
+    "marginWidth"
+]);
+
+
+const CONST_APPLET_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "align",
+    "alt",
+    "archive",
+    "border",
+    "codebase",
+    "height",
+    "hspace",
+    "mayscript",
+    "name",
+    "vspace",
+    "width",
+    "code"
+]);
+
+const CONST_EMBED_ATTRIBUTES = CONST_GLOBAL_ATTRIBUTES.concat([
+    "src",
+    "type",
+    "width",
+    "height"
+]);
+
+
+function get_all_valid_html_attributes(html_tag){
+
+    switch(html_tag){
+        case 'script': 
+            return CONST_SCRIPT_ATTRIBUTES;
+        case 'video':
+            return CONST_VIDEO_ATTRIBUTES;
+        case 'audio':
+            return CONST_AUDIO_ATTRIBUTES;
+        case 'track':
+            return CONST_TRACK_ATTRIBUTES;
+        case 'source':
+            return CONST_SOURCE_ATTRIBUTES;
+        case 'object':
+            return CONST_OBJECT_ATTRIBUTES;
+        case 'link':
+            return CONST_LINK_ATTRIBUTES;
+        case 'input': 
+            return CONST_INPUT_ATTRIBUTES;
+        case 'img':
+            return CONST_IMG_ATTRIBUTES;
+        case 'image':
+            return CONST_IMG_ATTRIBUTES;
+        case 'iframe':
+            return CONST_IFRAME_ATTRIBUTES;
+        case 'frame':
+            return CONST_FRAME_ATTRIBUTES;
+        case 'embed':
+            return CONST_EMBED_ATTRIBUTES;
+        case 'applet':
+            return CONST_APPLET_ATTRIBUTES;
+        default:
+             // all attributes
+            return CONST_HTML_ATTRIBUTES;
+    }
+}
+
+
+// cases of relationships of two nodes with respect to one another
+// note: we will test the case `attribute` in the fuzzer_iframes testsuite, here only consider child and sibling relations
+const two_node_relationship_types = ['child', 'sibling']; 
+
+/* a constant value to check if the clobbering was successful or not */
+const  DOM_CLOBBERING_SUCCESSFUL_VALUE = "DOM_CLOBBERING_SUCCESSFUL_VALUE";
+
+/* area to append the test DOM clobbering payloads */
+var clobbering_payload_area = theDocument.getElementById('clobbering-payloads');
+
+
+/* store the clobbering results in g_* global variables */
+var g_list_clobberable_x_y = [];
+var g_list_clobberable_window_x_y = [];
+var g_list_clobberable_document_x_y = [];
+
+var g_list_clobberable_x_x = [];
+var g_list_clobberable_window_x_x = [];
+var g_list_clobberable_document_x_x = [];
+
+
+/* global number of payloads generated and tested */
+var g_count_tests = 1;
+
+
+
+if(typeof String.prototype.replaceAll === "undefined") {
+    String.prototype.replaceAll = function(match, replace) {
+       return this.replace(new RegExp(match, 'g'), () => replace);
+    }
+}
+
+/** 
+* @param html
+* @return removes the `data-value=DOM_CLOBBERING_SUCCESSFUL_VALUE` attribute from the input html and returns it.
+*/
+function cleanDomClobberingPayload(html){
+
+    let returnHtml = html.replaceAll(`data-value="${DOM_CLOBBERING_SUCCESSFUL_VALUE}"`).replaceAll(`data-value='${DOM_CLOBBERING_SUCCESSFUL_VALUE}'`).replaceAll('undefined', '');
+    
+    return returnHtml;
+}
+
+function isWindowProxy(variable){
+
+    // Copied from AngularJS source code
+    // Thanks to: https://stackoverflow.com/questions/3099716/javascript-check-if-a-variable-is-the-window
+    if(variable && variable.document && variable.location && variable.alert && variable.setInterval){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function test_inclusion_for_x_y_11(html_tag1, html_tag2, html_attr1, html_attr2, clobbering_variable_x, clobbering_variable_y, position){
+    g_count_tests+=1
+
+    try{
+        var div = theDocument.createElement('div');
+        
+        if(position === 'sibling'){
+            
+            var html = `
+            <${html_tag1} ${html_attr1}="${clobbering_variable_x}"></${html_tag1}>
+            <${html_tag2} ${html_attr2}="${clobbering_variable_y}" data-value="${DOM_CLOBBERING_SUCCESSFUL_VALUE}"></${html_tag2}>
+            `;         
+        }else if(position === 'child'){
+            
+            var html = `
+            <${html_tag1} ${html_attr1}="${clobbering_variable_x}">
+                <${html_tag2} ${html_attr2}="${clobbering_variable_y}" data-value="${DOM_CLOBBERING_SUCCESSFUL_VALUE}"></${html_tag2}>
+            </${html_tag1}>
+            `;        
+        }else{
+            // position=== 'attribute', i.e., the case of `srcdoc` attribute
+            var html = `
+            <${html_tag1} ${html_attr1}="${clobbering_variable_x}" srcdoc="<${html_tag2} ${html_attr2}='${clobbering_variable_y}' data-value='${DOM_CLOBBERING_SUCCESSFUL_VALUE}'></${html_tag2}>">
+            </${html_tag1}>
+            `;   
+        }
+
+        div.innerHTML = html;
+        // add the payload to DOM
+        clobbering_payload_area.appendChild(div);
+
+    }catch{
+        // PASS
+        // throws when we set an invalid value for an HTML attribute
+        // e.g., width=x where x is not a number.
+    }
+
+    function read(){
+
+        var clobbered_x_y;
+        var clobbered_window_x_y;
+        var clobbered_document_x_y;
+
+        var clobbered_x_x;
+        var clobbered_window_x_x;
+        var clobbered_document_x_x;
+
+        let html_attributes_tag1 = ['' + html_attr1 + '=' + clobbering_variable_x];
+        let html_attributes_tag2 = ['' + html_attr2 + '=' + clobbering_variable_y];
+
+
+        if(html_tag2 === 'iframe'){
+
+            try{
+
+
+                clobbered_x_y = eval(`${clobbering_variable_x} && ${clobbering_variable_x}.${clobbering_variable_y}`);
+                clobbered_window_x_y = eval(`window.${clobbering_variable_x} && window.${clobbering_variable_x}.${clobbering_variable_y}`)
+                clobbered_document_x_y = eval(`document.${clobbering_variable_x} && document.${clobbering_variable_x}.${clobbering_variable_y}`)
+
+
+                clobbered_x_x = eval(`${clobbering_variable_x} && ${clobbering_variable_x}.${clobbering_variable_x}`);
+                clobbered_window_x_x = eval(`window.${clobbering_variable_x} && window.${clobbering_variable_x}.${clobbering_variable_x}`) 
+                clobbered_document_x_x = eval(`document.${clobbering_variable_x} && document.${clobbering_variable_x}.${clobbering_variable_x}`)
+
+
+            }
+            catch{
+                // PASS
+                // handle the errors thrown due to clobbering failures and the variables not defined
+            }
+
+
+            // store results if clobbering successful
+            if(isWindowProxy(clobbered_x_y) || (clobbered_x_y && clobbered_x_y.getAttribute && clobbered_x_y.getAttribute('data-value') === DOM_CLOBBERING_SUCCESSFUL_VALUE) ){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": isWindowProxy(clobbered_x_y)? "WindowProxy": "HTMLElement",
+                };
+
+                g_list_clobberable_x_y.push(result);
+            }
+
+             if(isWindowProxy(clobbered_window_x_y) || (clobbered_window_x_y && clobbered_window_x_y.getAttribute && clobbered_window_x_y.getAttribute('data-value') === DOM_CLOBBERING_SUCCESSFUL_VALUE) ){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": isWindowProxy(clobbered_window_x_y)? "WindowProxy": "HTMLElement",
+                };
+                g_list_clobberable_window_x_y.push(result);
+            }
+            
+            if(isWindowProxy(clobbered_document_x_y) || (clobbered_document_x_y && clobbered_document_x_y.getAttribute && clobbered_document_x_y.getAttribute('data-value') === DOM_CLOBBERING_SUCCESSFUL_VALUE) ){
+                
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": isWindowProxy(clobbered_document_x_y)? "WindowProxy": "HTMLElement",
+                };
+                g_list_clobberable_document_x_y.push(result);
+            } 
+
+            if(isWindowProxy(clobbered_x_x) || (clobbered_x_x && clobbered_x_x.getAttribute && clobbered_x_x.getAttribute('data-value') === DOM_CLOBBERING_SUCCESSFUL_VALUE) ){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": isWindowProxy(clobbered_x_x)? "WindowProxy": "HTMLElement",
+                };
+
+                g_list_clobberable_x_x.push(result);
+            }
+
+             if(isWindowProxy(clobbered_window_x_x) || (clobbered_window_x_x && clobbered_window_x_x.getAttribute && clobbered_window_x_x.getAttribute('data-value') === DOM_CLOBBERING_SUCCESSFUL_VALUE) ){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": isWindowProxy(clobbered_window_x_x)? "WindowProxy": "HTMLElement",
+                };
+                g_list_clobberable_window_x_x.push(result);
+            }
+            
+            if(isWindowProxy(clobbered_document_x_x) || (clobbered_document_x_x && clobbered_document_x_x.getAttribute && clobbered_document_x_x.getAttribute('data-value') === DOM_CLOBBERING_SUCCESSFUL_VALUE) ){
+                
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": isWindowProxy(clobbered_document_x_x)? "WindowProxy": "HTMLElement",
+                };
+                g_list_clobberable_document_x_x.push(result);
+            }   
+
+
+
+        } else {
+
+            try{
+
+                clobbered_x_y = eval(`${clobbering_variable_x} && ${clobbering_variable_x}.${clobbering_variable_y} && ${clobbering_variable_x}.${clobbering_variable_y}.getAttribute('data-value')`);
+                
+                clobbered_window_x_y = eval(`window.${clobbering_variable_x} && window.${clobbering_variable_x}.${clobbering_variable_y} && window.${clobbering_variable_x}.${clobbering_variable_y}.getAttribute('data-value')`)
+                
+                clobbered_document_x_y = eval(`document.${clobbering_variable_x} && document.${clobbering_variable_x}.${clobbering_variable_y} && document.${clobbering_variable_x}.${clobbering_variable_y}.getAttribute('data-value')`)
+
+
+                clobbered_x_x = eval(`${clobbering_variable_x} && ${clobbering_variable_x}.${clobbering_variable_x} && ${clobbering_variable_x}.${clobbering_variable_x}.getAttribute('data-value')`);
+                
+                clobbered_window_x_x = eval(`window.${clobbering_variable_x} && window.${clobbering_variable_x}.${clobbering_variable_x} && window.${clobbering_variable_x}.${clobbering_variable_x}.getAttribute('data-value')`)
+                
+                clobbered_document_x_x = eval(`document.${clobbering_variable_x} && document.${clobbering_variable_x}.${clobbering_variable_x} && document.${clobbering_variable_x}.${clobbering_variable_x}.getAttribute('data-value')`)
+
+
+            }
+            catch{
+                // PASS
+                // handle the errors thrown due to clobbering failures and the variables not defined
+            }
+
+
+            // store results if clobbering successful
+            if(clobbered_x_y === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": "HTMLElement",
+                };
+
+                g_list_clobberable_x_y.push(result);
+            }
+
+             if(clobbered_window_x_y === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": "HTMLElement",
+                };
+                g_list_clobberable_window_x_y.push(result);
+            }
+            
+            if(clobbered_document_x_y === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+                
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": "HTMLElement",
+                };
+                g_list_clobberable_document_x_y.push(result);
+            }   
+
+            // store results if clobbering successful
+            if(clobbered_x_x === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": "HTMLElement",
+                };
+
+                g_list_clobberable_x_x.push(result);
+            }
+
+             if(clobbered_window_x_x === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": "HTMLElement",
+                };
+                g_list_clobberable_window_x_x.push(result);
+            }
+            
+            if(clobbered_document_x_x === DOM_CLOBBERING_SUCCESSFUL_VALUE){
+                
+                var result = {
+                    "html": cleanDomClobberingPayload(html),
+                    "html_tag1": html_tag1,
+                    "html_tag2": html_tag2,
+                    "html_attribute1": html_attributes_tag1,
+                    "html_attribute2": html_attributes_tag2,
+                    "relation_type": position,
+                    "return_value": "HTMLElement",
+                };
+                g_list_clobberable_document_x_x.push(result);
+            }  
+
+        }
+
+        // remove the payload from DOM
+        clobbering_payload_area.removeChild(div);
+
+    } // END read function
+
+
+    read();
+
+}
+
+
+function fuzzer_main(){
+
+    // influential attributes for dom clobbering according to the fuzzer results for the variable x
+    let html_attributes_x = [
+        'id',
+        'name'
+    ];
+
+    for(var html_tag1 of CONST_HTML_TAGS)
+    {        
+        for(var html_tag2 of CONST_HTML_TAGS){
+
+
+            for(var html_attr1 of html_attributes_x){
+
+                for(var html_attr2 of html_attributes_x){
+
+                    for(var position of two_node_relationship_types){
+                        
+                        // CASE 1: one attribute per each html tag
+                        test_inclusion_for_x_y_11(html_tag1, html_tag2, html_attr1, html_attr2, 'x', 'y', position);
+                        g_count_tests+=1;
+                            
+                        // // CASE 2: one attribute in first html tag, two attributes in the second
+                        // test_inclusion_for_x_y_12(html_tag1, html_tag2, html_attr1, html_attr2, 'x', 'y', position);
+                        // g_count_tests+=1;
+
+                        // // CASE 3: two attributes in the first html tag, one attribute in the second
+                        // test_inclusion_for_x_y_21(html_tag1, html_tag2, html_attr1, html_attr2, 'x', 'y', position);
+                        // g_count_tests+=1;
+
+                        // // CASE 4: two attributes per html tag
+                        // test_inclusion_for_x_y_22(html_tag1, html_tag2, html_attr1, html_attr2, 'x', 'y', position);
+                        // g_count_tests+=1;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+fuzzer_main();
+
+
+var data= {
+    "data": {
+        "total_tests": g_count_tests,
+        "clobberable_x": g_list_clobberable_x_y,
+        "clobberable_window_x": g_list_clobberable_window_x_y,
+        "clobberable_document_x": g_list_clobberable_document_x_y,
+        "clobberable_x_x": g_list_clobberable_x_x,
+        "clobberable_window_x_x": g_list_clobberable_window_x_x,
+        "clobberable_document_x_x": g_list_clobberable_document_x_x,
+
+    }
+}
+var postDataEndpoint = "{% url 'backend:post_domc_test' %}" + window.location.search;
+
+async function sendFinishSignal(){
+    
+    // add a node with id `DOMC_TESTS_FINISHED` to the DOM tree
+    // so that browser automation frameworks can check if the tests
+    // are finished or not
+
+    let label_id = 'DOMC_TESTS_FINISHED';
+    document.getElementById('clobbering-payloads').innerHTML = `<a id=${label_id}></a>`;
+
+}
+
+async function sendData(){
+
+    const response= await fetch(postDataEndpoint, {
+        method: 'POST',
+        body: JSON.stringify(data),
+    });
+
+    await sendFinishSignal();
+    return response.json();
+}
+
+function getNextTestUrl(){
+
+    let currentURL = ''+ window.location;
+    const params = new URLSearchParams(window.location.search);
+    let currentTestName = params.get('t');
+    
+    let fuzzer_x = 'fuzzer_x';
+    let fuzzer_x_custom = 'fuzzer_x_custom';
+    
+    let fuzzer_x_native = 'fuzzer_x_native';
+    let fuzzer_x_native_custom = 'fuzzer_x_native_custom';
+
+    let fuzzer_x_y_11 = 'fuzzer_x_y11';
+    let fuzzer_x_y_12 = 'fuzzer_x_y12';
+    let fuzzer_x_y_21 = 'fuzzer_x_y21';
+    let fuzzer_x_y_22 = 'fuzzer_x_y22';
+
+    let fuzzer_x_y_11_custom = 'fuzzer_x_y11_custom';
+    let fuzzer_x_y_12_custom = 'fuzzer_x_y12_custom';
+    let fuzzer_x_y_21_custom = 'fuzzer_x_y21_custom';
+    let fuzzer_x_y_22_custom = 'fuzzer_x_y22_custom';
+
+    let fuzzer_iframes = 'fuzzer_iframes';
+
+    switch(currentTestName){
+
+
+        case fuzzer_x:
+            return currentURL.replace(fuzzer_x, fuzzer_x_custom);
+        case fuzzer_x_custom:
+            return currentURL.replace(fuzzer_x_custom, fuzzer_x_native);
+
+        case fuzzer_x_native:
+            return currentURL.replace(fuzzer_x_native, fuzzer_x_native_custom);
+        case fuzzer_x_native_custom:
+            return currentURL.replace(fuzzer_x_native_custom, fuzzer_x_y_11);
+
+        case fuzzer_x_y_11:
+            return currentURL.replace(fuzzer_x_y_11, fuzzer_x_y_12);
+        case fuzzer_x_y_12:
+            return currentURL.replace(fuzzer_x_y_12, fuzzer_x_y_21);
+        case fuzzer_x_y_21:
+            return currentURL.replace(fuzzer_x_y_21, fuzzer_x_y_22);
+        case fuzzer_x_y_22:
+            return currentURL.replace(fuzzer_x_y_22, fuzzer_x_y_11_custom);
+
+
+        case fuzzer_x_y_11_custom:
+            return currentURL.replace(fuzzer_x_y_11_custom, fuzzer_x_y_12_custom);
+        case fuzzer_x_y_12_custom:
+            return currentURL.replace(fuzzer_x_y_12_custom, fuzzer_x_y_21_custom);
+        case fuzzer_x_y_21_custom:
+            return currentURL.replace(fuzzer_x_y_21_custom, fuzzer_x_y_22_custom);
+        case fuzzer_x_y_22_custom:
+            return currentURL.replace(fuzzer_x_y_22_custom, fuzzer_iframes);
+
+
+        default:
+            return -1;
+    }
+}
+
+sendData().then((response)=> {
+    console.log(response);
+
+    let nextTestUrl = getNextTestUrl()
+    console.log('[+] moving to test:', nextTestUrl);
+    if(nextTestUrl !== -1){
+
+        setTimeout(()=> {
+            window.location.replace(nextTestUrl);
+        }, 3000);
+    }
+});
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+

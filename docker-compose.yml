@@ -1,0 +1,35 @@
+version: "3.9"
+   
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: webapp.Dockerfile
+    command: python manage.py runserver 0.0.0.0:3000
+    volumes:
+      - .:/code
+    ports:
+      - "3000:3000"
+
+  browserstack:
+    build: 
+      context: .
+      dockerfile: browserstack.Dockerfile
+    environment:
+      - BASE_URL=http://127.0.0.1:3000
+      - BROWSERSTACK_USERNAME=${BROWSERSTACK_USERNAME}
+      - BROWSERSTACK_ACCESS_KEY=${BROWSERSTACK_ACCESS_KEY}
+      - BROWSER_CAPABILITIES_FILE=${BROWSER_CAPABILITIES_FILE}
+    command: python run_browserstack.py --caps=${BROWSER_CAPABILITIES_FILE} --browserstack_username=${BROWSERSTACK_USERNAME} --browserstack_access_key=${BROWSERSTACK_ACCESS_KEY}
+
+  wiki:
+    build:
+      context: ./
+      dockerfile: wiki.Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/usr/src/app
+    stdin_open: true
+    tty: true
+    command: bundle exec jekyll serve -H 0.0.0.0 -t

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DOM Clobbering Index</title>
+</head>
+<body>
+
+<div>
+	<h2>DOM Clobbering Markup Tests</h2>
+	<hr>
+
+	<p> <b>Step 1:</b> Enter the browser config you are testing (only used for associating the test results to outputs): </p>
+
+	<div> 
+		<p> Your Browser: <input id="browser"/> </p>
+		<p> Version: <input id="browser_version"/> </p>
+		<button id="set-browser">submit</button>
+	</div>
+
+	<script type="text/javascript">
+		
+		document.getElementById('set-browser').addEventListener('click', ()=> {
+
+			var browser = document.getElementById('browser').value;
+			var version = document.getElementById('browser_version').value;
+
+			window.location.href = window.location.pathname + `?b=${browser}&v=${version}&t=`
+
+		});
+
+	</script>
+
+	
+	<p><b>Step 2:</b> Click on any of the links below to run the desired DOM clobbering tests for your browser: </p>
+	<p> <b>Note:</b> The tests may take a while to complete. You will see a blank webpage during this time!</p>
+	<hr>
+
+	<ul>
+		<li>
+			<a href="{{ fuzzer_x }}"> Clobbering Variable `x`</a>
+		</li>
+
+		<li>
+			<a href="{{ fuzzer_x_custom }}"> Clobbering Variable `x` With Custom Tags</a>
+		</li>
+
+		<li>
+			<a href="{{ fuzzer_x_native }}"> Clobbering Built-in APIs</a>
+		</li>
+
+		<li>
+			<a href="{{ fuzzer_x_native_custom }}"> Clobbering Built-in APIs With Custom Tags</a>
+		</li>
+
+
+		<li>
+			<a href="{{ fuzzer_x_y_11 }}"> Clobbering `x.y` With One Attribute per Tag</a>
+		</li>
+
+		<li>
+			<a href="{{ fuzzer_x_y_12 }}"> Clobbering `x.y` With One and Two Attributes for First and Second Tags</a>
+		</li>
+
+		<li>
+			<a href="{{ fuzzer_x_y_21 }}"> Clobbering `x.y` With Two and One Attributes for First and Second Tags</a>
+		</li>
+
+		<li>
+			<a href="{{ fuzzer_x_y_22 }}"> Clobbering `x.y` With Two Attributes per Tag</a>
+		</li>
+
+
+		<li>
+			<a href="{{ fuzzer_x_y_11_custom }}"> Clobbering `x.y` With One Attribute per Tag Considering Custom Tags</a>
+		</li>
+
+		<li>
+			<a href="{{ fuzzer_x_y_12_custom }}"> Clobbering `x.y` With One and Two Attributes for First and Second Tags Considering Custom Tags</a>
+		</li>
+
+		<li>
+			<a href="{{ fuzzer_x_y_21_custom }}"> Clobbering `x.y` With Two and One Attributes for First and Second Tags Considering Custom Tags</a>
+		</li>
+
+		<li>
+			<a href="{{ fuzzer_x_y_22_custom }}"> Clobbering `x.y` With Two Attributes per Tag Considering Custom Tags</a>
+		</li>
+
+		<li>
+			<a href="{{ fuzzer_iframes }}"> Clobbering `x` and `x.y` with frames</a>
+		</li>
+
+	</ul>
+
+</div>
+
+
+
+</body>
+</html>

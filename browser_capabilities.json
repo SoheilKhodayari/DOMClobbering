@@ -1,0 +1,13 @@
+[
+   {
+      "os_version":"Big Sur",
+      "os":"OS X",
+      "browser":"chrome",
+      "browser_version":"95.0",
+      "name":"Chrome-Desktop",
+      "build":"desktop-build-1",
+      "browserstack.local":"true",
+      "forcelocal":"true",
+      "browserstack.idleTimeout": "300"
+   }
+]

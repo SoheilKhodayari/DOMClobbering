@@ -1,0 +1,19 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "<a href=\"https://themes.3rdwavemedia.com/bootstrap-templates/popular/devblog-free-bootstrap-4-blog-template-for-developers/\" target=\"_blank\"><img src=\"https://themes.3rdwavemedia.com/wp-content/uploads/2019/02/Bootstrap-Blog-Template-DevBlog-Pormo.jpg\" alt=\"Bootstrap 4 Blog Template for Developers\" /></a>",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "gulp sass",
+    "watch": "gulp sass:watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
