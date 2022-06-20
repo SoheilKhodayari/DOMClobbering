@@ -1,6 +1,6 @@
-# DOM Clobbering Test Cases
+# DOMC Test Cases
 
-This folder contains a list of scripts for generating DOM Clobbering markups, covering all HTML tags, attributes, tags' relations, and attack targets (i.e., a variable `x`, an object property `x.y` or `x.x`, or a native browser API). 
+The [`domc_tests`](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_tests) folder contains a list of scripts for generating DOM Clobbering markups, covering all HTML tags, attributes, tags' relations, and attack targets (i.e., a variable `x`, an object property `x.y` or `x.x`, or a native browser API). 
 
 ## How it works?
 
