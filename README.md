@@ -47,6 +47,17 @@ DOMC-BT has a website available at [https://domclob.xyz](https://domclob.xyz).
 	- Online [demo](https://domclob.xyz/domc_wiki/index)
 
 
+
+## 💥 What is DOM Clobbering? 
+
+
+[DOM Clobbering](https://portswigger.net/web-security/dom-based/dom-clobbering) is an attack technique where the attacker achieves arbitrary client-side code execution by injecting a non-script HTML markup into a vulnerable webpage and transform the initially secure markup into executable code. 
+
+DOM Clobbering originates from a naming collision between JavaScript variables and [named HTML markups](https://html.spec.whatwg.org/multipage/window-object.html#named-access-on-the-window-object), where attackers confuse the web application by injecting HTML elements whose `id` or `name` attribute matches the name of security-sensitive variables, such as variables used for fetching remote content (e.g., script `src`). 
+
+For more information, See [here](https://domclob.xyz/wiki).
+
+
 ## 🚀 Browser Testing
 
 
