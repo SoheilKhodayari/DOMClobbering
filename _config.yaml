@@ -12,6 +12,7 @@ exclude:
   - CHANGELOG.md
   - CODE_OF_CONDUCT.md
   - static/README.md
+  - domc_tests/README.md
 
 # Aux links for the upper right navigation
 aux_links:

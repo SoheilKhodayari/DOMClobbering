@@ -32,7 +32,7 @@ DOMC-BT has a website available at [https://domclob.xyz](https://domclob.xyz).
 
 - **[Automated Browser Testing](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_tests)**
 	- A django webapp that serves DOM Clobbering test pages
-		- Test your browser by clicking a single URL
+		- Test your browser by visiting a single URL
 		- Dockerized container
 	- [Run test cases](https://github.com/SoheilKhodayari/DOMClobbering/blob/master/run_browserstack.py) against a pool of browser instances from [BrowserStack](https://www.browserstack.com/)
 - **[DOM Clobbering Attack Payload Generator](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_payload_generator)**
