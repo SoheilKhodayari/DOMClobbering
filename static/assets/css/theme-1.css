@@ -7036,6 +7036,8 @@ body {
     
 }
 
+html, body { max-width: 100%; overflow-x: hidden; }
+
 h1, h2, h3, h4, h5, h6 {
 	color: $theme-text-color-primary;
 	font-weight: bold;
@@ -7248,3 +7250,14 @@ svg.fa-plus {
 
 svg.fa-minus {
   color: #ea1d5d; }
+
+#scroll-table {
+  padding-top: 15px;
+  cursor: pointer; }
+  #scroll-table span {
+    position: absolute;
+    right: 10px; }
+    #scroll-table span.left {
+      right: 80px; }
+    #scroll-table span:hover * {
+      color: #ea1d5d; }

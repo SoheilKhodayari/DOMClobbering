@@ -16,7 +16,6 @@
     
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="./../static/assets/css/theme-1.css">
-
 </head> 
 
 <body>
@@ -50,19 +49,46 @@
     </div>
     
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-5">
+    <div class="container-fluid my-md-5">
+
+
       <div class="row justify-content-center">
 
-        <div class="input-group col-md-6 mb-4">
-            <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search" id="search-table">
-            <span class="input-group-append">
-              <button class="btn btn-outline-secondary border-left-0 border" type="button" id="search-button">
-                    <i class="fa fa-search"></i>
-              </button>
-            </span>
-        </div>
+          <div class="input-group col-md-4 mb-4">
+            <form class="input-group">
+              <input id="filter-browser" placeholder="Filter by Browser / Platform / Version" class="form-control">
+              <div class="input-group-append">
+                <button id="filter-browser-reset" class="btn bg-light border" type="button"><span class="fa fa-times"></span></button>
+              </div>
+            </form>
+          </div>
 
-        <div class="col-auto text-nowrap" style="width: 1280px !important">
+
+
+          <div class="input-group col-md-4 mb-4">
+              <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search" id="search-table">
+              <span class="input-group-append">
+                <button class="btn btn-outline-secondary border-left-0 border" type="button" id="search-button">
+                      <i class="fa fa-search"></i>
+                </button>
+              </span>
+          </div>
+
+          <div id="scroll-table" class="input-group col-md-2">
+
+              <span id="scroll-table-left" class="text-secondary left"><i class="fas fa-angle-double-left"></i> </span>
+
+              <span id="scroll-table-right" class="text-secondary"> <b>scroll</b> <i class="fas fa-angle-double-right"></i></span>
+          </div>
+
+      </div>
+
+
+      <div class="row justify-content-center">
+
+
+        <!-- <div class="col-auto text-nowrap" style="width: 1280px !important"> -->
+        <div id="table-container" class="col-md-10 text-nowrap mx-4">
           <table id="table-payloads" class="table table-responsive table-dark table-striped mx-auto w-auto" style="border-radius: .25em;"  
           data-page-size="50"
           data-pagination="true"
@@ -87,11 +113,11 @@
                 <th class="" data-field="Safari-iOS_14.7.1" >Safari iOS 14.7</th>
                 <th class="" data-field="Chrome-iOS_92.0.4515.90" >Chrome iOS 92.0</th>
                 <th class="" data-field="Opera-iOS_3.2.3" >Opera iOS 3.2</th>
-                  <th class="" data-field="Edge-iOS_95.0.1020.47" >Edge iOS 95.0</th>
+                <th class="" data-field="Edge-iOS_95.0.1020.47" >Edge iOS 95.0</th>
 
 
                 <th class="" data-field="Chrome-Desktop_96" >Chrome 96.0</th>
-                 <th class="" data-field="Firefox-Desktop_95.0" >Firefox 95.0</th>
+                <th class="" data-field="Firefox-Desktop_95.0" >Firefox 95.0</th>
                 <th class="" data-field="Opera-Desktop_82.0.4227.23" >Opera 82.0</th>
                 
                
@@ -104,7 +130,7 @@
 
                 <th class="" data-field="UCBrowser-Android_13.3.8.1305" >UCBrowser 13.3</th>
                 <th class="" data-field="Firefox-Android_94.1.2" >Firefox Andr. 94.1</th>
-                <th class="" data-field="Chrome-Android_95.0.4638.74" >Opera Andr. 95.0</th>
+                <th class="" data-field="Chrome-Android_95.0.4638.74" >Chrome Andr. 95.0</th>
                 <th class="" data-field="Edge-Android_95.0.1020.48" >Edge Andr. 95.0</th>
                 <th class="" data-field="SamsungInt-Android_15.0.6.3" >Samsung Int 15.0</th>
                 <th class="" data-field="Opera-Android_65.2.3381.61420" >Opera Andr. 65.2</th>

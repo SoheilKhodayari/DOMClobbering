@@ -1,14 +1,11 @@
 /* list of clobbering markups after being loaded */
-var domClobberingMarkups = [];
-
-/* a constant value to check if the clobbering was successful or not */
-const DOM_CLOBBERING_SUCCESSFUL_VALUE = "DOM_CLOBBERING_SUCCESSFUL_VALUE";
+var dom_clobbering_markups = [];
 
 /* area to append the test DOM clobbering payloads */
 var clobbering_payload_area = document.getElementById('clobbering-payloads');
 
 /* variable to enable/disable debug console logs */
-var DEBUG = false;
+var DEBUG = true;
 
 function test_clobbering_markup(markup, target) {
 
@@ -66,6 +63,32 @@ function highlight_code(codeElement){
     codeElement.innerHTML = highlight(codeElement.innerHTML);
 }
 
+
+function get_payloads_table_browser_header_names(){
+
+    let browsers = ['Firefox-iOS_39.0',
+        'Safari-iOS_14.7.1',
+        'Chrome-iOS_92.0.4515.90',
+        'Opera-iOS_3.2.3',
+        'Edge-iOS_95.0.1020.47',
+        'Chrome-Desktop_96',
+        'Firefox-Desktop_95.0',
+        'Opera-Desktop_82.0.4227.23',
+        'Safari-Desktop_15.1',
+        'Safari-Desktop_14.1',
+        'Safari-Desktop_13.1',
+        'TorBrowser-Desktop_11.0.1-mozilla91.3.0esr',
+        'Edge-Desktop_96.0.1054.43',
+        'UCBrowser-Android_13.3.8.1305',
+        'Firefox-Android_94.1.2',
+        'Chrome-Android_95.0.4638.74',
+        'Edge-Android_95.0.1020.48',
+        'SamsungInt-Android_15.0.6.3',
+        'Opera-Android_65.2.3381.61420']
+    return browsers;
+
+
+}
 
 function prepare_table_data(rawData) {
 
@@ -126,9 +149,9 @@ function set_table_data(data) {
 
     // remove the border for bootstrap `Loading, please wait` text
     // and make it hidden
-    var isLoadingEl = $('.fixed-table-loading').removeClass('table-bordered');
+    var is_loading_el = $('.fixed-table-loading').removeClass('table-bordered');
     setTimeout((e) => {
-        isLoadingEl.hide();
+        is_loading_el.hide();
     }, 1000);
 }
 
@@ -214,37 +237,79 @@ function detailFormatter(index, row) {
 $(document).ready(function() {
 
     // load markups
-    const fetchMarkupsHeaders = {
+    const fetch_markup_headers = {
         method: 'get',
         headers: {
             'content-type': 'text/csv;charset=UTF-8',
         },
     };
 
-    const response = fetch("./../domc_markups/dom-clobbering-markups.csv", fetchMarkupsHeaders)
+    const response = fetch("./../domc_markups/dom-clobbering-markups.csv", fetch_markup_headers)
         .then(response => response.text())
-        .then(rawData => Papa.parse(rawData))
+        .then(raw_data => Papa.parse(raw_data))
         .catch(err => console.log(err))
 
-    response.then(rawData => {
-        domClobberingMarkups = prepare_table_data(rawData.data);
-        set_table_data(domClobberingMarkups);
+    response.then(raw_data => {
+        dom_clobbering_markups = prepare_table_data(raw_data.data);
+        set_table_data(dom_clobbering_markups);
     });
 
 
     // markup search functionality
-    var searchTextElement = $("#search-table");
-    var searchButtonElement = $("#search-button");
+    var $search_text_el = $("#search-table");
+    var $search_button_el = $("#search-button");
 
     var search_handler = function(e) {
-        var value = searchTextElement.val().toLowerCase();
+        var value = $search_text_el.val().toLowerCase();
         $("#table-payloads tbody tr").filter(function() {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     };
 
-    searchTextElement.on("keyup", search_handler);
-    searchButtonElement.on("click", search_handler);
+    $search_text_el.on("keyup", search_handler);
+    $search_button_el.on("click", search_handler);
+
+
+    // filtering functionality by browser / version / platform
+    var $filter_browser_el = $('#filter-browser');
+    var $filter_browser_el_reset = $('#filter-browser-reset');
+    $filter_browser_el.on("keyup", function(e){
+
+        if(e.key !== "Enter" && e.keyCode !== 13){ return; }
+
+        let value = $filter_browser_el.val().toLowerCase().trim();
+        let all_th_header_names = get_payloads_table_browser_header_names();
+        let $table = $('#table-payloads');
+
+        if(value === ''){
+            for (let th of all_th_header_names){
+                $table.bootstrapTable('showColumn', th);
+            }
+        }else{   
+            for (let th of all_th_header_names){
+                if(th.toLowerCase().trim().indexOf(value) > -1){
+                    $table.bootstrapTable('showColumn', th);
+                    continue;
+                }
+                try{
+                     $table.bootstrapTable('hideColumn', th);
+                 }catch(e){
+                    console.log(th, e)
+                }
+               
+            }
+        }
+    });
+
+    $filter_browser_el_reset.on('click', function(e){
+        $filter_browser_el.val('');
+        let $table = $('#table-payloads');
+        let all_th_header_names = get_payloads_table_browser_header_names();
+        for (let th of all_th_header_names){
+            $table.bootstrapTable('showColumn', th);
+        }
+    });
+
 
 
     // event handler for the download payloads button
@@ -286,6 +351,22 @@ $(document).ready(function() {
     $('#table-payloads').on('click', 'tbody tr', function(e) {
         highlight_code_blocks();
     })
+
+    // horizontall scrolling
+    $("#scroll-table-right").on('click', function(e){
+        // scrolls to right; 
+        let pixels = 700;
+        var leftPos = $('#table-payloads').scrollLeft();
+        $("#table-payloads").animate({scrollLeft: leftPos + pixels}, 100);
+    });
+
+    $("#scroll-table-left").on('click', function(e){
+        // scrolls to left; 
+        let pixels = 700;
+        var leftPos = $('#table-payloads').scrollLeft();
+        $("#table-payloads").animate({scrollLeft: leftPos - pixels}, 100);
+    });
+
 
 });
 
