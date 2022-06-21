@@ -7239,3 +7239,12 @@ h1, h2, h3, h4, h5, h6 {
 .table-red-col {
   background: rgba(255, 41, 41, 0.249);
   color: white; }
+
+.table tbody tr {
+  cursor: pointer; }
+
+svg.fa-plus {
+  color: #ea1d5d; }
+
+svg.fa-minus {
+  color: #ea1d5d; }

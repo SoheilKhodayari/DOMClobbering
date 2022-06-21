@@ -43,11 +43,14 @@
         <h1 class="display-5 font-weight-normal">DOM Clobbering Markups</h1>
         <hr class="ribbon-yellow">        
         <p class="ml-0"> Comprehensive List of DOM Clobbering Payloads for Mobile and Desktop Web Browsers</p>
+
+        <button id='btn-test-browser' class="btn btn-primary"><i class="fab fa-chrome"></i> Test your Browser</button>
+        <button id='btn-download-payloads' class="btn btn-danger bg-theme ml-2"><i class="fa fa-download" aria-hidden="true"></i> Download Markups</button>
       </div>
     </div>
     
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-2">
+    <div class="d-md-flex flex-md-equal w-100 my-md-5">
       <div class="row justify-content-center">
 
         <div class="input-group col-md-6 mb-4">
@@ -60,8 +63,14 @@
         </div>
 
         <div class="col-auto text-nowrap" style="width: 1280px !important">
-          <table id="table-payloads" class="table table-responsive table-dark table-striped mx-auto w-auto" data-pagination=true style="border-radius: .25em;"  data-page-size="50" >
-            <!-- data-search="true" data-strict-search="true" data-filter-strict-search="true" -->
+          <table id="table-payloads" class="table table-responsive table-dark table-striped mx-auto w-auto" style="border-radius: .25em;"  
+          data-page-size="50"
+          data-pagination="true"
+          data-detail-view="true"
+          data-detail-view-icon="true"
+          data-detail-view-by-click="true"
+          data-detail-formatter="detailFormatter" >
+          <!-- data-search="true" data-strict-search="true"-->
             <thead>
               <tr> <!--  class="tr-table-header" -->
                 <th class="" data-field="id">#</th>
@@ -90,7 +99,7 @@
                 <th class="" data-field="Safari-Desktop_14.1" >Safari 14.1</th>
                 <th class="" data-field="Safari-Desktop_13.1" >Safari 13.1</th>
                 <th class="" data-field="TorBrowser-Desktop_11.0.1-mozilla91.3.0esr" >TorBrowser 11.0.1</th>
-                  <th class="" data-field="Edge-Desktop_96.0.1054.43" >Edge 96.0</th>
+                <th class="" data-field="Edge-Desktop_96.0.1054.43" >Edge 96.0</th>
 
 
                 <th class="" data-field="UCBrowser-Android_13.3.8.1305" >UCBrowser 13.3</th>
@@ -111,9 +120,9 @@
     </div>
 
 
-
-
-
+    <!-- container for testing payloads in the browser -->
+    <div id="clobbering-payloads"> 
+    </div>
 
 
 
@@ -171,6 +180,7 @@
     <script src="./../static/assets/js/lib/bootstrap.tables.js"></script>
     <script src="./../static/assets/js/lib/holder.min.js"></script> 
     <script src="./../static/assets/js/lib/papaparse.min.js" type="text/javascript"></script>
+     <script src="./../static/assets/js/lib/js-syntax-highlighter.js" type="text/javascript"></script>
 
 
     <script>
