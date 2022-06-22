@@ -11,7 +11,7 @@ Stable
 {: .label .label-green }
 
 
-## Vulnerability Indicators and Guidelines
+## Defenses
 
 This section presents the defenses against DOM Clobbering. 
 
