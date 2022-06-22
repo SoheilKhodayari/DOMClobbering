@@ -42,7 +42,7 @@ Accordingly, web browsers map HTML elements to JavaScript objects automatically 
 Consider the following code listing. 
 
 ```js
-var s = document.createElement('script');
+1. var s = document.createElement('script');
 2 let config = window.globalConfig || {href: 'script.js'};
 3 s.src = config.href;
 4 document.body.appendChild(s);
