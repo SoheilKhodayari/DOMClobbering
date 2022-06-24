@@ -128,7 +128,7 @@ function prepare_table_data(rawData) {
             // android
             "UCBrowser-Android_13.3.8.1305": markup[13].trim() === '1' ? '✅' : '❌',
             "Firefox-Android_94.1.2": markup[15].trim() === '1' ? '✅' : '❌',
-            "Chrome-Android_95.0.4638.74": markup[16].trim() === '1' ? '✅' : '❌',
+            "Chrome-Android_95.0.4638.74": markup[26].trim() === '1' ? '✅' : '❌',
             "Edge-Android_95.0.1020.48": markup[16].trim() === '1' ? '✅' : '❌',
             "SamsungInt-Android_15.0.6.3": markup[19].trim() === '1' ? '✅' : '❌',
             "Opera-Android_65.2.3381.61420": markup[23].trim() === '1' ? '✅' : '❌',

@@ -110,7 +110,9 @@ $ docker-compose up browserstack
 
 ## ➰ DOM Clobbering Markups
 
-The data of the DOM Clobbering markups are available in the [`domc_markups`](./domc_markups) folder in the root project directory for different  `mobile` and `desktop` browsers and browser versions
+The raw data of DOM Clobbering markups are available in the [`domc_markups`](./domc_markups) folder in the root project directory for different  `mobile` and `desktop` browsers and browser versions. 
+
+An interactive version of clobbering markups is available online [here](https://domclob.xyz/domc_markups/list), which provides an online browser testing solution. For testing each markup in your browser, simply click on it. 
 
 
 
