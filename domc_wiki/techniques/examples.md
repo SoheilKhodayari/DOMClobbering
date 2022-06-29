@@ -14,7 +14,7 @@ Stable
 
 ## DOM Clobbering Examples
 
-This section presents a few simple, hands-on examples of DOM Clobbering, capturing the corner-case behaviours of browsers for exploitation.
+This section presents a few simple, hands-on examples of DOM Clobbering, capturing the corner-case behaviours of browsers for exploitation, and will be updated gradually. 
 
 
 ### Implicit Cast of HTMLAnchorElement to Href String
