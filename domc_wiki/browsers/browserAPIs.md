@@ -20,6 +20,6 @@ The list of clobberable `window` properties can be found in the below table.
 
 
 <p align="center">
-  <img align="center" width="900" src="https://raw.githubusercontent.com/SoheilKhodayari/DOMClobbering/master/static/assets/images/wiki/clobberable-apis-browsers.png?token=GHSAT0AAAAAABQVMFYTPKGU2S3MWXBNBN5OYV6X7RA">
+  <img align="center" width="900" src="https://raw.githubusercontent.com/SoheilKhodayari/DOMClobbering/master/static/assets/images/wiki/clobberable-apis-browsers.png?token=GHSAT0AAAAAABQVMFYSDEUAL3FRRBDJ32PCYV6YLZQ">
 </p>
 
