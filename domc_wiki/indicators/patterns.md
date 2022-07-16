@@ -18,7 +18,7 @@ Common DOM Clobbering vulnerable code patterns are listed below.
 
 
 <p align="center">
-  <img align="center" width="900" src="static/assets/images/wiki/code-patterns.png">
+  <img align="center" width="900" src="../../static/assets/images/wiki/code-patterns.png">
 </p>
 
 
