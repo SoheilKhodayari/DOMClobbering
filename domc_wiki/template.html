@@ -22,18 +22,65 @@
 
 <body>
     
-    <nav class="site-header sticky-top py-1">
-      <!-- <div class="nav-ribbon"></div> -->
-      <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2" href="#">
-            <img src="././../static/assets/images/logo.png" height="28px;" alt="DC">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand mr-0 mr-md-2" href="#">
+          <img src="static/assets/images/logo.png" height="32px;" alt="DC">
         </a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Wiki</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Payloads</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Browser Testing</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">Payload Generator</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">GitHub</a>
-      </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">  
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active ">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://domclob.xyz/domc_wiki">Wiki</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://domclob.xyz/domc_markups/list">Markups</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Browser Testing
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://domclob.xyz/domc_markups/list">Online</a>
+                <a class="dropdown-item" href="https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_tests">Offline</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_markups">Dataset</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://domclob.xyz/domc_payload_generator/">Payload Generator</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/SoheilKhodayari/TheThing/">Detection</a>
+            </li>
+          </ul>
+    
+        </div>
+
+        <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
+
+          <li class="nav-item">
+            <a class="nav-link p-2" href="https://github.com/SoheilKhodayari/DOMClobbering" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2" href="https://twitter.com/Soheil__K" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </li>
+
+        </ul>
+
+        <a class="btn btn-outline-theme d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="https://github.com/SoheilKhodayari/DOMClobbering/releases">Download</a>
+
     </nav>
     <div class="ribbon"></div>
 

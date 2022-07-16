@@ -237,7 +237,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dropdown-toggle {
-  background-color:#454d55;
+  &.btn {
+    background-color:#454d55;
+  }
 }
 
 .pagination > .page-last-separator > a {
