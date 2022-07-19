@@ -252,9 +252,13 @@ DOMClobberingPayloadGenerator.prototype.create_dom_clobbering_html_payload = fun
 
 function get_bootstrap_color_class(i) {
 
+	/* pick a random color */
 	let idx = i % 8;
 	var choices = ['primary', 'success', 'warning', 'danger', 'secondary', 'info', 'warning', 'dark'];
- 	return choices[idx];
+	return choices[idx];
+
+ 	/* always return the same color */
+ 	// return 'primary'
 }
 
 
