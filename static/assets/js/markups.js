@@ -111,27 +111,27 @@ function prepare_table_data(rawData) {
             "RelationType": markup[6].trim(),
             "ReferenceType": markup[7].trim(),
             // ios
-            "Firefox-iOS_39.0": markup[8].trim() === '1' ? '✅' : '❌',
-            "Safari-iOS_14.7.1": markup[14].trim() === '1' ? '✅' : '❌',
-            "Chrome-iOS_92.0.4515.90": markup[20].trim() === '1' ? '✅' : '❌',
-            "Opera-iOS_3.2.3": markup[22].trim() === '1' ? '✅' : '❌',
-            "Edge-iOS_95.0.1020.47": markup[18].trim() === '1' ? '✅' : '❌',
+            "Firefox-iOS_39.0": markup[8].trim() === '1' ? '🔴' : '❎',
+            "Safari-iOS_14.7.1": markup[14].trim() === '1' ? '🔴' : '❎',
+            "Chrome-iOS_92.0.4515.90": markup[20].trim() === '1' ? '🔴' : '❎',
+            "Opera-iOS_3.2.3": markup[22].trim() === '1' ? '🔴' : '❎',
+            "Edge-iOS_95.0.1020.47": markup[18].trim() === '1' ? '🔴' : '❎',
             // desktop
-            "Chrome-Desktop_96": markup[10].trim() === '1' ? '✅' : '❌',
-            "Firefox-Desktop_95.0": markup[11].trim() === '1' ? '✅' : '❌',
-            "Opera-Desktop_82.0.4227.23": markup[9].trim() === '1' ? '✅' : '❌',
-            "Safari-Desktop_15.1": markup[12].trim() === '1' ? '✅' : '❌',
-            "Safari-Desktop_14.1": markup[17].trim() === '1' ? '✅' : '❌',
-            "Safari-Desktop_13.1": markup[21].trim() === '1' ? '✅' : '❌',
-            "TorBrowser-Desktop_11.0.1-mozilla91.3.0esr": markup[24].trim() === '1' ? '✅' : '❌',
-            "Edge-Desktop_96.0.1054.43": markup[25].trim() === '1' ? '✅' : '❌',
+            "Chrome-Desktop_96": markup[10].trim() === '1' ? '🔴' : '❎',
+            "Firefox-Desktop_95.0": markup[11].trim() === '1' ? '🔴' : '❎',
+            "Opera-Desktop_82.0.4227.23": markup[9].trim() === '1' ? '🔴' : '❎',
+            "Safari-Desktop_15.1": markup[12].trim() === '1' ? '🔴' : '❎',
+            "Safari-Desktop_14.1": markup[17].trim() === '1' ? '🔴' : '❎',
+            "Safari-Desktop_13.1": markup[21].trim() === '1' ? '🔴' : '❎',
+            "TorBrowser-Desktop_11.0.1-mozilla91.3.0esr": markup[24].trim() === '1' ? '🔴' : '❎',
+            "Edge-Desktop_96.0.1054.43": markup[25].trim() === '1' ? '🔴' : '❎',
             // android
-            "UCBrowser-Android_13.3.8.1305": markup[13].trim() === '1' ? '✅' : '❌',
-            "Firefox-Android_94.1.2": markup[15].trim() === '1' ? '✅' : '❌',
-            "Chrome-Android_95.0.4638.74": markup[26].trim() === '1' ? '✅' : '❌',
-            "Edge-Android_95.0.1020.48": markup[16].trim() === '1' ? '✅' : '❌',
-            "SamsungInt-Android_15.0.6.3": markup[19].trim() === '1' ? '✅' : '❌',
-            "Opera-Android_65.2.3381.61420": markup[23].trim() === '1' ? '✅' : '❌',
+            "UCBrowser-Android_13.3.8.1305": markup[13].trim() === '1' ? '🔴' : '❎',
+            "Firefox-Android_94.1.2": markup[15].trim() === '1' ? '🔴' : '❎',
+            "Chrome-Android_95.0.4638.74": markup[26].trim() === '1' ? '🔴' : '❎',
+            "Edge-Android_95.0.1020.48": markup[16].trim() === '1' ? '🔴' : '❎',
+            "SamsungInt-Android_15.0.6.3": markup[19].trim() === '1' ? '🔴' : '❎',
+            "Opera-Android_65.2.3381.61420": markup[23].trim() === '1' ? '🔴' : '❎',
 
 
         }
@@ -162,7 +162,7 @@ function detailFormatter(index, row) {
     let works_in_browsers = [];
     let keys = Object.keys(row)
     for (let k of keys){
-        if(row[k] === '✅'){
+        if(row[k] === '🔴'){
             works_in_browsers.push(k)
         }
     }
@@ -198,7 +198,7 @@ function detailFormatter(index, row) {
 		<div id="test-success-${index+1}" style="display:none">
 		   	<div class="row mx-md-1 my-md-2">
 			    	<b class="text-light">Result:</b> 
-			    	<span class="text-success ml-md-2"> ✅ Success. </span>
+			    	<span class="text-danger ml-md-2"> 🔴 Success. </span>
 			</div>
 		   	<div class="row mx-md-1">
 			    	<b class="text-light">Description:</b> 
@@ -209,7 +209,7 @@ function detailFormatter(index, row) {
 		<div id="test-failed-${index+1}" style="display:none">
 		   	<div class="row mx-md-1 my-md-2">
 			    	<b class="text-light">Result:</b> 
-			    	<span class="text-danger ml-md-2"> ❌ Failed. </span>
+			    	<span class="text-success ml-md-2"> ❎ Failed. </span>
 			</div>
 		   	<div class="row mx-md-1">
 			    	<b class="text-light">Description:</b> 
@@ -274,9 +274,10 @@ $(document).ready(function() {
     var $filter_browser_el = $('#filter-browser');
     var $filter_browser_el_reset = $('#filter-browser-reset');
     $filter_browser_el.on("keyup", function(e){
-
-        if(e.key !== "Enter" && e.keyCode !== 13){ return; }
-
+        e.preventDefault();
+        if(e.key == "Enter" && e.keyCode === 13){ 
+            return; 
+        }
         let value = $filter_browser_el.val().toLowerCase().trim();
         let all_th_header_names = get_payloads_table_browser_header_names();
         let $table = $('#table-payloads');
