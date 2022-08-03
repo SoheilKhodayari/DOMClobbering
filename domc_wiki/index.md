@@ -6,7 +6,7 @@ nav_order: 1
 {% include toggle_color.html %}
 
 
-# DOM CLobbering
+# DOM Clobbering
 
 Stable
 {: .label .label-green }
