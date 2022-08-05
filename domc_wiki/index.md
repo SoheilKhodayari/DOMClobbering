@@ -14,7 +14,7 @@ Stable
 This wiki is meant to introduce readers to DOM Clobbering and also serve as a reference guide for experienced researchers and developers for DOM Clobbering vulnerabilities. 
 {: .fs-5 .fw-300 }
 
-[Contribute Now](https://domclob.xyz/domc_wiki/contributions){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/SoheilKhodayari/DOMClobbering){: .btn .btn-blue .fs-5 .mb-4 .mb-md-0 }
+[Contribute Now](https://soheilkhodayari.github.io/DOMClobbering/domc_wiki/contributions){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/SoheilKhodayari/DOMClobbering){: .btn .btn-blue .fs-5 .mb-4 .mb-md-0 }
 
 <hr>
 

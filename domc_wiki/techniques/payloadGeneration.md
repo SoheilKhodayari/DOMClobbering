@@ -14,7 +14,7 @@ Stable
 
 ## Automatic Payload Generation
 
-You can automatically generate DOM Clobbering attack payloads via the [online payload generation service](https://domclob.xyz/domc_payload_generator/).
+You can automatically generate DOM Clobbering attack payloads via the [online payload generation service](https://soheilkhodayari.github.io/DOMClobbering/domc_payload_generator/).
 
 The source code of the generator is accessible [here](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_payload_generator).
 

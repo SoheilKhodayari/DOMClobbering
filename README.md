@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
-	<a href="https://domclob.xyz">Website</a> |
+	<a href="https://soheilkhodayari.github.io/DOMClobbering">Website</a> |
 		<a href="https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_tests">Browser Testing</a> |
-	<a href="https://domclob.xyz/domc_wiki/index">Wiki</a> |
-	<a href="https://domclob.xyz/domc_markups/list">Markups</a> |
-	<a href="https://domclob.xyz/domc_payload_generator/">Payload Generator</a>
+	<a href="https://soheilkhodayari.github.io/DOMClobbering/domc_wiki/index">Wiki</a> |
+	<a href="https://soheilkhodayari.github.io/DOMClobbering/domc_markups/list">Markups</a> |
+	<a href="https://soheilkhodayari.github.io/DOMClobbering/domc_payload_generator/">Payload Generator</a>
 </p>
 
 
@@ -25,7 +25,7 @@ A comprehensive framework for testing web browsers against DOM Clobbering. DOMC-
 
 DOMC-BT complements [`TheThing`](https://github.com/SoheilKhodayari/TheThing) a static-dynamic security analysis tool for DOM clobbering based on [JAW](https://soheilkhodayari.github.io/JAW/).
 
-DOMC-BT has a website available at [https://domclob.xyz](https://domclob.xyz).
+DOMC-BT has a website available at [https://soheilkhodayari.github.io/DOMClobbering](https://soheilkhodayari.github.io/DOMClobbering).
 
 
 ## ✨ What This Repository Includes?
@@ -36,15 +36,15 @@ DOMC-BT has a website available at [https://domclob.xyz](https://domclob.xyz).
 		- Dockerized container
 	- [Run test cases](https://github.com/SoheilKhodayari/DOMClobbering/blob/master/run_browserstack.py) against a pool of browser instances from [BrowserStack](https://www.browserstack.com/)
 - **[DOM Clobbering Attack Payload Generator](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_payload_generator)**
-	- Online [demo](https://domclob.xyz/domc_payload_generator/)
+	- Online [demo](https://soheilkhodayari.github.io/DOMClobbering/domc_payload_generator/)
 - **[Interactive List of Clobbering Payloads](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_markups)** 
 	- Clobbering Markups for `mobile` and `desktop` browsers
-	- Online [demo](https://domclob.xyz/domc_markups/list)
+	- Online [demo](https://soheilkhodayari.github.io/DOMClobbering/domc_markups/list)
 - **[DOM Clobbering Wiki](https://github.com/SoheilKhodayari/DOMClobbering/tree/master/domc_wiki)**
 	- Clobbering techniques
 	- Vulnerable code patterns
 	- Defenses
-	- Online [demo](https://domclob.xyz/domc_wiki/index)
+	- Online [demo](https://soheilkhodayari.github.io/DOMClobbering/domc_wiki/index)
 
 
 
@@ -55,7 +55,7 @@ DOMC-BT has a website available at [https://domclob.xyz](https://domclob.xyz).
 
 DOM Clobbering originates from a naming collision between JavaScript variables and [named HTML markups](https://html.spec.whatwg.org/multipage/window-object.html#named-access-on-the-window-object), where attackers confuse the web application by injecting HTML elements whose `id` or `name` attribute matches the name of security-sensitive variables, such as variables used for fetching remote content (e.g., script `src`). 
 
-For more information, See [here](https://domclob.xyz/domc_wiki/).
+For more information, See [here](https://soheilkhodayari.github.io/DOMClobbering/domc_wiki/).
 
 
 ## 🚀 Browser Testing
@@ -112,13 +112,13 @@ $ docker-compose up browserstack
 
 The raw data of DOM Clobbering markups are available in the [`domc_markups`](./domc_markups) folder in the root project directory for different  `mobile` and `desktop` browsers and browser versions. 
 
-An interactive version of clobbering markups is available online [here](https://domclob.xyz/domc_markups/list), which provides an online browser testing solution. For testing each markup in your browser, simply click on it. 
+An interactive version of clobbering markups is available online [here](https://soheilkhodayari.github.io/DOMClobbering/domc_markups/list), which provides an online browser testing solution. For testing each markup in your browser, simply click on it. 
 
 
 
 ## 📚 DOM Clobbering Wiki
 
-This repository features one of the first online wikis for DOM Clobbering accessible at [https://domclob.xyz](https://domclob.xyz).
+This repository features one of the first online wikis for DOM Clobbering accessible at [https://soheilkhodayari.github.io/DOMClobbering](https://soheilkhodayari.github.io/DOMClobbering).
 
 The `markdown` files of the wiki are available in the [`domc_wiki`](https://github.com/SoheilKhodayari/DOMClobbering/blob/master/domc_wiki) folder in the project root directory. 
 
