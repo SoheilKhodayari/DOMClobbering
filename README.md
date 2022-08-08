@@ -107,7 +107,6 @@ $ docker-compose up browserstack
 ```
 
 
-
 ## ➰ DOM Clobbering Markups
 
 The raw data of DOM Clobbering markups are available in the [`domc_markups`](./domc_markups) folder in the root project directory for different  `mobile` and `desktop` browsers and browser versions. 
@@ -170,7 +169,7 @@ This project is intended to be a safe, welcoming space, and contributors are exp
 
 ## 📝 Academic Publication
 
-The contents of this repository has been published as a part of a S&P'23 paper. If you use the DOMC-BT for academic research, we encourage you to cite the following [paper](#coming-soon):
+The contents of this repository has been published as a part of a IEEE S&P'23 paper. If you use DOMC-BT for academic research, we encourage you to cite the following [paper](#coming-soon):
 
 ```
 @inproceedings {SKhodayariSP23TheThing,
@@ -181,9 +180,9 @@ The contents of this repository has been published as a part of a S&P'23 paper. 
 }
 ```
 
-## Cross-Browser Testing
+## Browser Testing
 
-We thank the [BrowserStack Open-Source Program](https://www.browserstack.com/open-source) for supporting this project with their free and top quality services.
+We thank the [BrowserStack Open-Source Program](https://www.browserstack.com/open-source) for supporting this project.
 
 <a target="_blank" href="https://www.browserstack.com/"><img width="165" src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png"></a><br>
 
