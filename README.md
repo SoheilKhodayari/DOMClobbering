@@ -87,7 +87,7 @@ Now, you should be able to visit the list of tests on `http://127.0.0.1:3000`, a
 
 You can use [BrowserStack](https://www.browserstack.com/) to run the DOM clobbering testsuite for many browsers simultaneously.
 
-**Step 1:** specify the browser configurations you would like to test in `.json` file. See [here](https://www.browserstack.com/automate/capabilities) for more information about available list of browsers. You can find an example in [browser_capabilities.json](browser_capabilities.json) in the root project directory.
+**Step 1:** specify the browser configurations you would like to test in a `.json` file. See [here](https://www.browserstack.com/automate/capabilities) for more information about available list of browsers. You can find an example in [browser_capabilities.json](browser_capabilities.json) in the root project directory.
 
 **Step 2:** Run the webapp hosting the test pages, and setup a proxy so that BrowserStack can access this webapp:
 ``` bash
@@ -97,7 +97,7 @@ $ ./browserstack_proxy ACCOUNT_KEY
 
 **Note:** In the above command, replace `ACCOUNT_KEY` with your `BrowserStack` [access key](https://www.browserstack.com/docs/iaam/security/manage-access-keys).
 
-**Note:** For setting up the proxy, you may need to download the appropriate `BrowserStack` [binary](https://www.browserstack.com/docs/local-testing/releases-and-downloads) and rename it to `BrowserStackLocal`. For more information, refer to the officail BrowserStack local testing [documentation](https://www.browserstack.com/docs/local-testing).
+**Note:** For setting up the proxy, you may need to download the appropriate `BrowserStack` [binary](https://www.browserstack.com/docs/local-testing/releases-and-downloads) and rename it to `BrowserStackLocal`. For more information, refer to the official BrowserStack local testing [documentation](https://www.browserstack.com/docs/local-testing).
 
 
 **Step 3:** Run the automated docker service called `browserstack` to execute the tests:
