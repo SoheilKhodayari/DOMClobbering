@@ -14,18 +14,18 @@ if(theTheme === THEME_LIGHT){
 } else if (theTheme === THEME_DARK){
 	jtd.setTheme('dark');
 } else{
-  // default
+  	/* default */
 	jtd.setTheme('light');
 }
 
 jtd.addEvent(toggleDarkMode, 'click', function(){
   if (jtd.getTheme() === THEME_DARK) {
-    jtd.setTheme(THEME_LIGHT);
-    localStorage.setItem(THEME_STORAGE_KEY, THEME_LIGHT);
+	jtd.setTheme(THEME_LIGHT);
+    	localStorage.setItem(THEME_STORAGE_KEY, THEME_LIGHT);
 
   } else {
   	localStorage.setItem(THEME_STORAGE_KEY, THEME_DARK);
-    jtd.setTheme(THEME_DARK);
+    	jtd.setTheme(THEME_DARK);
   }
 });
 </script>
