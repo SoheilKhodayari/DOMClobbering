@@ -30,7 +30,7 @@ Test cases are organized into multiple pages based on the attack targets.
 	- `fuzzer_x_y22_custom.html`
 	- `fuzzer_iframes.html`
 
-3. Clobbering Native Browser APIs
+3. Clobbering Native Browser APIs:
 	- `fuzzer_x_native.html`
 	- `fuzzer_x_native_custom.html`
 
