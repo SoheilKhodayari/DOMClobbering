@@ -181,7 +181,7 @@ function detailFormatter(index, row) {
         document.body.appendChild(div);
         let v = eval(target);
         if (v && (!isNaN(v) || v.toString().indexOf('HTML') > -1 || v.toString().indexOf('Element') > -1     
-             || v.toString().indexOf('Collection') > -1 || v.toString().indexOf('Window') > -1) {
+             || v.toString().indexOf('Collection') > -1 || v.toString().indexOf('Window') > -1)) {
             is_clobbered = true;
         }
     } catch(e) {
