@@ -37,18 +37,18 @@ Accordingly, web browsers map HTML elements to JavaScript objects automatically 
 
 
 
-## Attack Example
+## Attack Examples
 
-Consider the following code listing. 
+When an [undefined variable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and an HTML markup have the same name, the browser replaces the content of the variable with the DOM object mirroring the markup type. 
+
+**Example 1:** 
 
 ```js
 1. var s = document.createElement('script');
-2 let config = window.globalConfig || {href: 'script.js'};
-3 s.src = config.href;
-4 document.body.appendChild(s);
+2. let config = window.globalConfig || {href: 'script.js'};
+3. s.src = config.href;
+4. document.body.appendChild(s);
 ```
-
-When an [undefined variable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and an HTML markup have the same name, the browser replaces the content of the variable with the DOM object mirroring the markup type. 
 
 The snippet shows a vulnerable code, which loads a script whose URL is stored in a global configuration object, i.e., `window.globalConfig`. Specifically, the code first creates a `script` tag (line 1), and then, it retrieves the global configuration object and stores it in a local variable `config` (line 2). If the configuration object does not exist, it uses a minimal default configuration, i.e., `{href: script.js'}` (line 2). Then, the program sets the `src` attribute of the newly created script tag to the `href` property of the configuration object (line 3) and appends the new script to the DOM tree, resulting in the execution of the script (line 4). 
 
@@ -60,6 +60,33 @@ When parsing such a markup code, the browser maps the anchor tag element to the 
 
 **Note.** Attackers can abuse named property accesses in other ways, where instead of overwriting variables by HTML nodes, they can overshadow [browser APIs](https://developer.mozilla.org/en-US/docs/Web/API). For example, if the attacker inserts a markup with `id=getElementbyId` in DOM, then the API `document.getElementbyId` no longer refers to the built-in API for finding an element in the DOM tree, but rather mirrors the DOM element with id `getElementbyId` in the DOM tree. This behaviour is due to the so-called [named property visibility algorithm](https://webidl.spec.whatwg.org/#legacy-platform-object-abstract-ops).
 
+
+**Example 2:** 
+
+```js
+1. document.conf = {};
+2. const queryParams = new URLSearchParams(window.location.search);
+3. if(isTrustedOrigin(queryParams.get('next'))){
+4. 		document.conf.src = queryParams.get('next');
+5. }
+6. // [...]
+7. let next = document.conf.src || 'https://benign1.com/index.html';
+8. window.location.href = next;
+9. // [...]
+10. function isTrustedOrigin(url){ 
+11.	  let targetOrigin = new URL(url).origin;
+12.	  let trustedOrigins= [
+13.	    new URL('https://benign1.com').origin, 
+14.		new URL('https://benign2.com').origin
+15.	  ];
+16.	  if(trustedOrigins.indexOf(targetOrigin) !== -1) return true;
+17.	  return false;
+18. }
+```
+
+The snippet above reads the value of a query parameter `next`, and if it belongs to a trusted domain, it stores it globally in `document.conf.src` (lines 1-4). Then, it redirects the page to `document.conf.src` or a default value (line 6).
+
+This script is vulnerable because it ignores the fact that assignments to `document` are always overshadowed by DOM Clobbering. For example, if attackers inject `<img name="conf" src="javascript:alert(1)">`, the `document.conf` would point to the image tag, so `document.conf.src` is an attacker-controlled JavaScript payloa. Hence, this results in XSS when assigned to the top window location (line 8).
 
 
 ## About This Wiki
