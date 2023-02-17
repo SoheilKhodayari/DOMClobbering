@@ -67,20 +67,20 @@ When parsing such a markup code, the browser maps the anchor tag element to the 
 1. document.conf = {};
 2. const queryParams = new URLSearchParams(window.location.search);
 3. if(isTrustedOrigin(queryParams.get('next'))){
-4. 		document.conf.src = queryParams.get('next');
+4.   document.conf.src = queryParams.get('next');
 5. }
 6. // [...]
 7. let next = document.conf.src || 'https://benign1.com/index.html';
 8. window.location.href = next;
 9. // [...]
 10. function isTrustedOrigin(url){ 
-11.	  let targetOrigin = new URL(url).origin;
-12.	  let trustedOrigins= [
-13.	    new URL('https://benign1.com').origin, 
-14.		new URL('https://benign2.com').origin
-15.	  ];
-16.	  if(trustedOrigins.indexOf(targetOrigin) !== -1) return true;
-17.	  return false;
+11.  let targetOrigin = new URL(url).origin;
+12.  let trustedOrigins= [
+13.    new URL('https://benign1.com').origin, 
+14.    new URL('https://benign2.com').origin
+15.  ];
+16.  if(trustedOrigins.indexOf(targetOrigin) !== -1) return true;
+17.  return false;
 18. }
 ```
 
