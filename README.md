@@ -113,6 +113,7 @@ The raw data of DOM Clobbering markups are available in the [`domc_markups`](./d
 
 An interactive version of clobbering markups is available online [here](https://soheilkhodayari.github.io/DOMClobbering/domc_markups/list), which provides an online browser testing solution. For testing each markup in your browser, simply click on it. 
 
+Found a new clobbering markup not in the [online list](https://soheilkhodayari.github.io/domc_markups/list) and that you would like to share? Then, open up a new PR [here](https://github.com/SoheilKhodayari/DOMClobbering/pulls).
 
 
 ## 📚 DOM Clobbering Wiki
@@ -161,7 +162,7 @@ For any questions, suggestions, feedback or concerns, please [raise an issue in 
 
 ## 🎃 Contribution and Code Of Conduct
 
-Bug reports and pull requests are more than welcomed on [GitHub](https://github.com/SoheilKhodayari/TheThing/pulls). For more information, please refer to [contribution guidelines](https://github.com/SoheilKhodayari/DOMClobbering/blob/master/domc_wiki/contributions.md). 
+Bug reports and pull requests are more than welcomed on [GitHub](https://github.com/SoheilKhodayari/DOMClobbering/pulls). For more information, please refer to [contribution guidelines](https://github.com/SoheilKhodayari/DOMClobbering/blob/master/domc_wiki/contributions.md). 
 
 This project is intended to be a safe, welcoming space, and contributors are expected to adhere to the contributor [code of conduct](https://github.com/SoheilKhodayari/DOMClobbering/blob/master/CODE_OF_CONDUCT.md). 
 
