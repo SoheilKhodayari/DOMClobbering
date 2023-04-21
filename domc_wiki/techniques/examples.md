@@ -29,7 +29,7 @@ Consider the following code listing:
 
 Attackers can obtain arbitrary code execution by clobbering the `window.CONF` property in line 2, as it is used as the `src` attribute of a dynamically loaded script
 
-For successful exploitation, the value of `window.CONF` must be an `string`, and with DOM Clobbering we replace it with an `HTMLElement` or `WindowProxy`, which could prevent us from exploiting this vulnerability. However, when assigning a value to `HTMLScriptElement.src`, if the value is an instance of `HTMLAnchorElement`, the browser implicitly casts the value to its `href` property value. 
+For successful exploitation, the value of `window.CONF` must be a `string`, and with DOM Clobbering we replace it with an `HTMLElement` or `WindowProxy`, which could prevent us from exploiting this vulnerability. However, when assigning a value to `HTMLScriptElement.src`, if the value is an instance of `HTMLAnchorElement`, the browser implicitly casts the value to its `href` property value. 
 
 **Exploitation.** To exploit the above code lisiting, attackers can inject the following payload:
 

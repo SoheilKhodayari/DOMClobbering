@@ -86,7 +86,7 @@ When parsing such a markup code, the browser maps the anchor tag element to the 
 
 The snippet above reads the value of a query parameter `next`, and if it belongs to a trusted domain, it stores it globally in `document.conf.src` (lines 1-4). Then, it redirects the page to `document.conf.src` or a default value (line 6).
 
-This script is vulnerable because it ignores the fact that assignments to `document` are always overshadowed by DOM Clobbering. For example, if attackers inject `<img name="conf" src="javascript:alert(1)">`, the `document.conf` would point to the image tag, so `document.conf.src` is an attacker-controlled JavaScript payloa. Hence, this results in XSS when assigned to the top window location (line 8).
+This script is vulnerable because it ignores the fact that assignments to `document` are always overshadowed by DOM Clobbering. For example, if attackers inject `<img name="conf" src="javascript:alert(1)">`, the `document.conf` would point to the image tag, so `document.conf.src` is an attacker-controlled JavaScript payload. Hence, this results in XSS when assigned to the top window location (line 8).
 
 
 ## About This Wiki
