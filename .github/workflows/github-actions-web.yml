@@ -3,7 +3,6 @@ run-name: ${{ github.actor }} is running the DOM Clobbering test server check wi
 on:
   push:
     branches:
-    - master
     - develop
     - features/**
   pull_request:
