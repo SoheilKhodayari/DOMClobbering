@@ -27,6 +27,8 @@ DOMC-BT complements [`TheThing`](https://github.com/SoheilKhodayari/TheThing) a 
 
 DOMC-BT has a website available at [https://soheilkhodayari.github.io/DOMClobbering](https://soheilkhodayari.github.io/DOMClobbering).
 
+**HTML Sanitizer Testing Pipeline**: Please see the [HTML-ST](https://github.com/SoheilKhodayari/html-sanitizer-testing-pipeline) repository!
+
 
 ## ✨ What This Repository Includes?
 
