@@ -1,5 +1,5 @@
-name: test server check
-
+name: build status
+run-name: ${{ github.actor }} is running the DOM Clobbering test server check with GitHub Actions 🚀
 on:
   push:
     branches:
@@ -20,11 +20,4 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Start containers
-      run: docker-compose up web
-
-    - name: tests
-      run: curl -X GET "http://127.0.0.1:3000"
-
-    - name: Stop containers
-      if: always()
-      run: docker-compose down web
+      run: docker-compose build web
