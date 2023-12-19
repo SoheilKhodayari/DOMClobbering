@@ -172,7 +172,7 @@ This project is intended to be a safe, welcoming space, and contributors are exp
 
 ## 📝 Academic Publication
 
-The contents of this repository has been published as a part of a IEEE S&P'23 paper. If you use DOMC-BT for academic research, we encourage you to cite the following [paper](#coming-soon):
+The contents of this repository has been published as a part of a IEEE S&P'23 paper. If you use DOMC-BT for academic research, we encourage you to cite the following [paper](https://ieeexplore.ieee.org/document/10179403):
 
 ```
 @inproceedings {SKhodayariSP23TheThing,
