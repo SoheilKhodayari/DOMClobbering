@@ -47,9 +47,9 @@ Another common mistake enabling DOM Clobbering is treating DOM properties, like 
 Properties of `document` can always be overwritten by DOM Clobbering, even immediately after they are assigned a value, as in pattern C. Accordingly, developers should refrain from using `document` as a means to store and retrieve global values. Instead, they can:
 
 - rewrite their application to avoid global values.
+- explicitly add them as properties on `window` (or [`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)), e.g. `window.x=1` - making sure to avoid pattern G and H.
 - use `var` (NOT `let` nor `const`) in the global context to define global values, e.g. `var x=1` - making sure to avoid pattern A, B, and F.
 - initialize global values without `var` (nor `let or `const`), e.g. `x=1` - making sure to avoid pattern E, G, and H.
-- explicitly add them as properties on `window` (or [`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)), e.g. `window.x=1` - making sure to avoid pattern G and H.
 
 The following table shows how declerations affect global value access patterns in the precense of DOM Clobbering.
 
