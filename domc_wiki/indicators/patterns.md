@@ -44,8 +44,58 @@ Another common mistake enabling DOM Clobbering is treating DOM properties, like 
 
 ### Do Not Use Document for Global Variables
 
-Properties of `document` can always be overwritten by DOM Clobbering, even immediately after they are assigned a value, as in pattern C. Accordingly, developers should refrain from using `document` as a mean to store and retrieve global values. Instead, they can declare variables with `const` or `var` in the global context, or use the [globalThis](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) object. 
+Properties of `document` can always be overwritten by DOM Clobbering, even immediately after they are assigned a value, as in pattern C. Accordingly, developers should refrain from using `document` as a means to store and retrieve global values. Instead, they can:
 
+- rewrite their application to avoid global values.
+- explicitly add them as properties on `window` (or [`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)), e.g. `window.x=1` - making sure to avoid pattern G and H.
+- use `var` (NOT `let` nor `const`) in the global context to define global values, e.g. `var x=1` - making sure to avoid pattern A, B, and F.
+- initialize global values without `var` (nor `let or `const`), e.g. `x=1` - making sure to avoid pattern E, G, and H.
+
+The following table shows how declerations affect global value access patterns in the precense of DOM Clobbering.
+
+| Declaration        | Target         | Injection          | Clobbered |
+| -----------------: | -------------: | ------------------ | --------- |
+| `x = 1`            | `window.x`     | `id=x` OR `name=x` | No (*)    |
+| `x = 1`            | `globalThis.x` | `id=x` OR `name=x` | No (*)    |
+| `x = 1`            | `document.x`   | `name=x`           | Yes       |
+| `x = 1`            | `x`            | `id=x` OR `name=x` | No (')    |
+| `var x = 1`        | `window.x`     | `id=x` OR `name=x` | No (**)   |
+| `var x = 1`        | `globalThis.x` | `id=x` OR `name=x` | No (**)   |
+| `var x = 1`        | `document.x`   | `name=x`           | Yes       |
+| `var x = 1`        | `x`            | `id=x` OR `name=x` | No        |
+| `let x = 1`        | `window.x`     | `id=x` OR `name=x` | Yes       |
+| `let x = 1`        | `globalThis.x` | `id=x` OR `name=x` | Yes       |
+| `let x = 1`        | `document.x`   | `name=x`           | Yes       |
+| `let x = 1`        | `x`            | `id=x` OR `name=x` | No        |
+| `const x = 1`      | `window.x`     | `id=x` OR `name=x` | Yes       |
+| `const x = 1`      | `globalThis.x` | `id=x` OR `name=x` | Yes       |
+| `const x = 1`      | `document.x`   | `name=x`           | Yes       |
+| `const x = 1`      | `x`            | `id=x` OR `name=x` | No        |
+| `window.x = 1`     | `window.x`     | `id=x` OR `name=x` | No (***)  |
+| `window.x = 1`     | `globalThis.x` | `id=x` OR `name=x` | No (***)  |
+| `window.x = 1`     | `document.x`   | `name=x`           | Yes       |
+| `window.x = 1`     | `x`            | `id=x` OR `name=x` | No (***)  |
+| `globalThis.x = 1` | `window.x`     | `id=x` OR `name=x` | No (***)  |
+| `globalThis.x = 1` | `globalThis.x` | `id=x` OR `name=x` | No (***)  |
+| `globalThis.x = 1` | `document.x`   | `name=x`           | Yes       |
+| `globalThis.x = 1` | `x`            | `id=x` OR `name=x` | No (***)  |
+
+- (*): subject to pattern E, G, and H.
+- (**): subject to pattern A, B, and F.
+- (***): subject to pattern G and H.
+- ('): subject to pattern G.
+
+If you cannot avoid global values, a general approach is to include a script like the following as early as possible and exclusively use `appGlobals` for global variables (possibly enforced by a linter).
+
+```html
+<script>
+// Don't do anything before the assignment to appGlobals.
+appGlobals = {
+  // Define your globals without reading from window or document, e.g.:
+  foo: "bar",
+};
+</script>
+```
 
 ### Namespace Isolation
 
