@@ -55,17 +55,17 @@ The following table shows how declerations affect global value access patterns i
 
 | Declaration	       | Target	        | Injection	         | Clobbered |
 | -----------------: | -------------: | ------------------ | --------- |
-| `x = 1`	           | `window.x`	    | `id=x` OR `name=x` | No (*)    |
+| `x = 1`            | `window.x`     | `id=x` OR `name=x` | No (*)    |
 | `x = 1`            | `globalThis.x` | `id=x` OR `name=x` | No (*)    |
-| `x = 1`	           | `document.x`   | `name=x`	         | Yes       |
-| `x = 1`	           | `x`	          | `id=x` OR `name=x` | No (')    |
+| `x = 1`            | `document.x`   | `name=x`           | Yes       |
+| `x = 1`            | `x`            | `id=x` OR `name=x` | No (')    |
 | `var x = 1`        | `window.x`     | `id=x` OR `name=x` | No (**)   |
 | `var x = 1`        | `globalThis.x` | `id=x` OR `name=x` | No (**)   |
 | `var x = 1`        | `document.x`   | `name=x`           | Yes       |
 | `var x = 1`        | `x`            | `id=x` OR `name=x` | No        |
-| `let x = 1`	       | `window.x`     | `id=x` OR `name=x` | Yes       |
+| `let x = 1`        | `window.x`     | `id=x` OR `name=x` | Yes       |
 | `let x = 1`        | `globalThis.x` | `id=x` OR `name=x` | Yes       |
-| `let x = 1`	       | `document.x`   | `name=x`           | Yes       |
+| `let x = 1`        | `document.x`   | `name=x`           | Yes       |
 | `let x = 1`        | `x`            | `id=x` OR `name=x` | No        |
 | `const x = 1`      | `window.x`     | `id=x` OR `name=x` | Yes       |
 | `const x = 1`      | `globalThis.x` | `id=x` OR `name=x` | Yes       |
