@@ -87,7 +87,7 @@ The following table shows how declerations affect global value access patterns i
 
 If you cannot avoid global values, a general approach is to include a script like the following as early as possible and exclusively use `appGlobals` for global variables (possibly enforced by a linter).
 
-```javascript
+```html
 <script>
 // Don't do anything before the assignment to appGlobals.
 appGlobals = {
