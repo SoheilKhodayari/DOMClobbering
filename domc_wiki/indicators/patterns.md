@@ -53,7 +53,7 @@ Properties of `document` can always be overwritten by DOM Clobbering, even immed
 
 The following table shows how declerations affect global value access patterns in the precense of DOM Clobbering.
 
-| Declaration	       | Target	        | Injection	         | Clobbered |
+| Declaration        | Target         | Injection          | Clobbered |
 | -----------------: | -------------: | ------------------ | --------- |
 | `x = 1`            | `window.x`     | `id=x` OR `name=x` | No (*)    |
 | `x = 1`            | `globalThis.x` | `id=x` OR `name=x` | No (*)    |
