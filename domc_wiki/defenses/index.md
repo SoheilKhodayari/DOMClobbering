@@ -41,11 +41,22 @@ When attackers can clobber the `src` attribute of dynamically created scripts, t
 However, unlike malicious JavaScript injected by the attacker, injected HTML code is not blocked by CSP. Accordingly, CSP does not mitigate other variants of DOM Clobbering that do not require script `src` manipulation, e.g., clobbering the parameters of dynamic code evaluation constructs `eval` or `new Function()`can lead to CSP-bypassable XSS.
 
 
-### Freezing Object Properties
+### Non-Configurable Object Properties
 
-Another way to mitigate DOM Clobbering is to freeze DOM object properties<sup>[\[3\]](#references)</sup>, e.g., via [Object.freeze()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) method, which prevents the object to be overwritten by named DOM elements.
+Another way to mitigate DOM Clobbering is to mark DOM object properties as `configurable: false`, e.g., via [`Object.defineProperty()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) (see [\[3\]](#references) for more strategies). For example:
 
-While effective, determining all objects and object properties that need to be frozen is a non-trivial, error-prone task. Also, sealed objects cannot be changed anymore, hindering the dynamic composition of webpages. 
+```js
+// Define a non-configurable property on document to prevent DOM
+// Clobbering from shadowing it.
+Object.defineProperty(document, '<PROPERTY>', {
+  value: "<VALUE>",     // the (initial) value
+  configurable: false,  // prevent redefinition, deletion, and clobbering
+  enumerable: true,     // [OPTIONAL] make it visible during enumeration
+  writable: false,      // [OPTIONAL] prevent changes to the value
+});
+```
+
+While effective, there are some caveats. First, determining all object properties that need to be marked in this way is a non-trivial, error-prone task. Second, this approach does not work if the property is clobbered before defining it. 
 
 
 ### Disabling DOM Clobbering
